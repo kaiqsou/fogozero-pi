@@ -1,4 +1,4 @@
-# Fogo Zero
+# Sobre o Projeto
 
 Fogo Zero é um Projeto do curso de Desenvolvimento de Software Multiplataforma, desenvolvido na Fatec Jaú pelos alunos: Kaique, Marina e Tamires.
 
