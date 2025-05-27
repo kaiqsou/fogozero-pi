@@ -21,7 +21,7 @@
                     <li><a href="educacao.php">Educação</a></li>
                     <li><a href="../index.php#mapas">Mapas</a></li>
                     <li><a href="denuncia.php">Denuncie</a></li>
-                    <li><a href="../index.php#quemsomos">Sobre Nós</a></li>
+                    <!--<li><a href="../index.php#quemsomos">Sobre Nós</a></li>-->
                     <li><a href="login.php">Login</a></li>
                 </ul>
             </nav>

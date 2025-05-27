@@ -23,7 +23,7 @@
                     <li><a href="educacao.php">Educação</a></li>
                     <li><a href="../index.php#mapas">Mapas</a></li>
                     <li><a href="denuncia.php">Denuncie</a></li>
-                    <li><a href="quemsomos.php">Sobre Nós</a></li>
+                    <!-- <li><a href="quemsomos.php">Sobre Nós</a></li> -->
                     <li><a href="cadastro.php">Cadastre-se</a></li>
                 </ul>
             </nav>

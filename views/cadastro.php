@@ -4,7 +4,7 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8" />
@@ -25,7 +25,7 @@
                     <li><a href="educacao.php">Educação</a></li>
                     <li><a href="../index.php#mapas">Mapas</a></li>
                     <li><a href="denuncia.php">Denuncie</a></li>
-                    <li><a href="quemsomos.php">Sobre Nós</a></li>
+                    <!--<li><a href="quemsomos.php">Sobre Nós</a></li>-->
                     <li><a href="login.php">Login</a></li>
                 </ul>
             </nav>
@@ -71,6 +71,12 @@
                     <input type="checkbox" class="form-check-input" id="alerta-email">
                 </div>
 
+                <div>
+                    <p class="text-center mb-4">Já tem conta? Faça login <a href="login.php">aqui</a>!</p>
+                </div>
+                <div>
+                    <p class="text-center mb-4">Já tem conta? Faça login <a href="login.php">aqui</a>!</p>
+                </div>
                 <div>
                     <p class="text-center mb-4">Já tem conta? Faça login <a href="login.php">aqui</a>!</p>
                 </div>

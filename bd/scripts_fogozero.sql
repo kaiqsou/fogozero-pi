@@ -23,8 +23,8 @@ CREATE TABLE IF NOT EXISTS denuncias
 	id_denuncia BIGINT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     descricao VARCHAR(100),
     localizacao VARCHAR(255) NOT NULL,
-    lat DECIMAL(15, 14),    /* latitude */
-    long DECIMAL(15, 14),   /* longitude */
+    lat DECIMAL(15,14),    /* latitude */
+    long DECIMAL(15,14),   /* longitude */
     data_denuncia DATETIME NOT NULL,
     comentario VARCHAR(255),
     arquivo VARCHAR(255) NOT NULL,
