@@ -1,5 +1,5 @@
-CREATE DATABASE FogoZero;
-USE FogoZero;
+CREATE DATABASE fogozero;
+USE fogozero;
 
 CREATE TABLE IF NOT EXISTS usuarios
 (

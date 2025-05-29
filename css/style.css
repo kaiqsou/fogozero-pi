@@ -304,6 +304,11 @@ img
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
+.comentarios-lista
+{
+  margin-top: 300px;
+}
+
 .comentario-item 
 {
   border-bottom: 1px solid #ccc;
