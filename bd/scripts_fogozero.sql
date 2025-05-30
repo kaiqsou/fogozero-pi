@@ -18,17 +18,22 @@ CREATE TABLE IF NOT EXISTS usuarios
     imagem VARCHAR(255)
 );
 
+/* 
+INSERT INTO usuarios(nome, email, senha, telefone) VALUES("kaique", "kaiqsouza2004@hotmail.com", "123456", "14991144192"); 
+
+SELECT * FROM usuarios;
+*/
+
 CREATE TABLE IF NOT EXISTS denuncias
 (
 	id_denuncia BIGINT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     descricao VARCHAR(100),
     localizacao VARCHAR(255) NOT NULL,
-    lat DECIMAL(15,14),    /* latitude */
-    long DECIMAL(15,14),   /* longitude */
+    latitude DECIMAL(15,14),    /* ou 10,8 */
+    longitude DECIMAL(15,14),   /* ou 11,8 */
     data_denuncia DATETIME NOT NULL,
     comentario VARCHAR(255),
     arquivo VARCHAR(255) NOT NULL,
-	cod_confirmacao VARCHAR(5) NOT NULL,
 	
     usuario_id BIGINT NULL,
     FOREIGN KEY (usuario_id) REFERENCES usuarios(id_usuario)
