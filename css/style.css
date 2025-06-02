@@ -1,55 +1,32 @@
-*
-{
+/* RESET E BASE */
+* {
   box-sizing: border-box;
 }
-
-html, body
-{
-  height: 100%;
+body, h1, h2, p, ul, li, a {
   margin: 0;
   padding: 0;
 }
-
-h1, h2, p, ul, li, a 
-{
-  margin: 0;
-  padding: 0;
-}
-
-body 
-{
+body {
   font-family: "Nunito", Arial, Helvetica, sans-serif;
   color: #222222;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
 }
-
-ul 
-{
+ul {
   list-style: none;
 }
-
-a 
-{
+a {
   text-decoration: none;
 }
-
-img 
-{
+img {
   display: block;
   max-width: 100%;
 }
-  
-/* Superinfo */
-.superinfo-bg 
-{
+
+/* SUPERINFO */
+.superinfo-bg {
   background: #cc6600;
   color: white;
 }
-
-.superinfo 
-{
+.superinfo {
   max-width: 960px;
   margin: 0 auto;
   display: flex;
@@ -57,25 +34,19 @@ img
   padding: 10px;
   flex-wrap: wrap;
 }
-
-.superinfo p, .superinfo a 
-{
+.superinfo p,
+.superinfo a {
   margin: 0 10px 10px;
 }
-
-.superinfo a 
-{
+.superinfo a {
   color: white;
 }
-  
-/* Menu */
-.menu-bg 
-{
+
+/* MENU */
+.menu-bg {
   background: #ff9933;
 }
-
-.menu 
-{
+.menu {
   max-width: 960px;
   margin: 0 auto;
   padding: 15px 0;
@@ -84,47 +55,34 @@ img
   align-items: center;
   flex-wrap: wrap;
 }
-
-.menu a 
-{
+.menu a {
   color: white;
 }
-
-.menu-logo a 
-{
+.menu-logo a {
   font-size: 2.25em;
   font-weight: bold;
   margin: 0 10px;
 }
-
-.menu-nav ul 
-{
+.menu-nav ul {
   display: flex;
   flex-wrap: wrap;
 }
-
-.menu-nav li 
-{
+.menu-nav li {
   margin-right: 20px;
 }
-
-.menu-nav a 
-{
+.menu-nav a {
   font-size: 1.25em;
   padding: 10px;
   display: block;
 }
-
-.menu-nav a:hover 
-{
+.menu-nav a:hover {
   color: #cc6600;
   background-color: whitesmoke;
   border-radius: 10px;
 }
-  
-/* Introdução */
-.introducao 
-{
+
+/* INTRODUÇÃO */
+.introducao {
   font-size: 3em;
   line-height: 1;
   text-align: center;
@@ -132,10 +90,10 @@ img
   max-width: 960px;
   margin: 0 auto;
 }
-  
-/* Seção Sobre */
-.sobre 
-{
+
+
+/* SEÇÃO SOBRE */
+.sobre {
   border-top: 2px solid #cc6600;
   border-bottom: 2px solid #cc6600;
   max-width: 960px;
@@ -144,50 +102,37 @@ img
   display: flex;
   flex-wrap: wrap;
 }
-
-.sobre-info
-{
+.sobre-info {
   flex: 2 1 300px;
   margin: 0 10px;
 }
-
-.sobre-info h1 
-{
+.sobre-info h1 {
   font-size: 3em;
   margin-bottom: 0.5em;
 }
-
-.sobre-info p 
-{
+.sobre-info p {
   font-size: 1.25em;
   line-height: 1.4;
   margin-bottom: 1em;
   color: #7c7c7c;
 }
-
-.sobre-img 
-{
+.sobre-img {
   flex: 1 1 160px;
   margin: 0 10px;
 }
-  
-/* Seção Sites */
-.sites 
-{
+
+/* SITES */
+.sites {
   background: #f7f7f7;
   padding: 60px;
 }
-
-.sites-container 
-{
+.sites-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
 }
-
-.sites-item 
-{
+.sites-item {
   flex: 1 1 200px;
   background: #fff;
   border: 2px solid #ccc;
@@ -196,160 +141,184 @@ img
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 10px;
 }
-
-.sites-item a 
-{
-  font-size: 1.2em;
-  color: #ff9933;
-}
-
-.sites-item a:hover 
-{
-  text-decoration: underline;
-}
-
-.sites-item h2 
-{
+.sites-item h2 {
   font-size: 3em;
   color: #131212;
   text-align: center;
   margin-top: 10px;
 }
-  
-/* Educação */
-.educacao-container 
-{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+.sites-item a {
+  font-size: 1.2em;
+  color: #ff9933;
+}
+.sites-item a:hover {
+  text-decoration: underline;
 }
 
-.educacao-intro, .educacao-incendios, .educacao-bombeiros 
-{
-  background: #f7f7f7;
-  margin: 40px auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+/* EDUCAÇÃO - COMPLEMENTO */
+.hero-educacao {
+  background: linear-gradient(to bottom, #ff9933, rgba(249, 231, 204, 0.95)), url('../img/hero-educacao.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 100px 0;
+  text-align: center;
+  margin-bottom: 40px;
+  border-bottom: 4px solid #ff6600;
 }
 
-.educacao-bombeiros 
-{
+.hero-educacao h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-educacao .lead {
+  font-size: 1.5rem;
   max-width: 800px;
+  margin: 0 auto 30px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
 
-.bombeiros-videos 
-{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: space-between;
+.btn-warning {
+  background-color: #ff8c00;
+  border-color: #ff8c00;
+  font-weight: bold;
+  color: #fff;
 }
 
-.bombeiros-videos iframe 
-{
-  border: 5px solid #ff6600;
-  border-radius: 5px;
+.btn-warning:hover {
+  background-color: #e67e00;
+  border-color: #e67e00;
+  color: #fff;
 }
+
+.btn-outline-warning {
+  color: #ff8c00;
+  border-color: #ff8c00;
+}
+
+.btn-outline-warning:hover {
+  background-color: #ff8c00;
+  color: #fff;
+}
+
+/* Cards */
+.sites-item {
+  transition: all 0.3s ease;
+  border: 2px solid #ff9933 !important;
+}
+
+.sites-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(255,140,0,0.2);
+}
+
+/* Quiz */
+.quiz-prevencao {
+  background-color: #fff8f0;
+  border-left: 5px solid #ff6600;
+}
+
+.quiz-opcao.active {
+  background-color: #ff8c00;
+  color: white;
+}
+
+/* Listas com ícones */
+.list-group-item i {
+  min-width: 24px;
+  text-align: center;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .hero-educacao {
+      padding: 60px 0;
+  }
   
-/* Painel Fogo */
-.painel-fogo 
-{
+  .hero-educacao h1 {
+      font-size: 2.5rem;
+  }
+  
+  .hero-educacao .lead {
+      font-size: 1.2rem;
+  }
+}
+
+/* PAINEL FOGO */
+.painel-fogo {
   background: #ffffff;
   padding: 60px;
   display: flex;
   justify-content: center;
 }
-
-.painel-fogo-container 
-{
+.painel-fogo-container {
   width: 960px;
   padding-top: 20px;
 }
-
-.painel-fogo-itens h2 
-{
+.painel-fogo-itens h2 {
   font-size: 3em;
   font-weight: bold;
   color: #222;
   margin: 10px;
   padding: 20px;
 }
-
-.painel-fogo-itens p 
-{
+.painel-fogo-itens p {
   font-size: 1.25em;
   color: #7c7c7c;
   margin: 0 0 20px;
   padding: 20px;
 }
 
-/* Denúncia */
-.fundo-imagem 
-{
+/* DENÚNCIA */
+.fundo-imagem {
   background-size: cover;
   padding: 60px 20px;
   min-height: calc(100vh - 100px);
   box-sizing: border-box;
 }
-
-.comentarios-form, .comentarios-lista 
-{
+.comentarios-form,
+.comentarios-lista {
   max-width: 600px;
   margin: 60px auto;
   background: rgba(255, 255, 255, 0.8);
   border: 2px solid #ccc;
   border-radius: 8px;
   padding: 20px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
-.comentarios-lista
-{
-  margin-top: 300px;
-}
-
-.comentario-item 
-{
+.comentario-item {
   border-bottom: 1px solid #ccc;
   padding: 10px;
   margin-bottom: 10px;
 }
-
-.comentario-item:last-child 
-{
+.comentario-item:last-child {
   border-bottom: none;
 }
-
-.comentario-item strong 
-{
+.comentario-item strong {
   color: #ff9933;
 }
-  
-/* Formulário Genérico */
-.form-group 
-{
+
+
+/* FORMULÁRIO GENÉRICO */
+.form-group {
   margin-bottom: 15px;
   text-align: left;
 }
-
-.form-group label 
-{
+.form-group label {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
 }
-
-.form-group input, .form-group textarea 
-{
+.form-group input,
+.form-group textarea {
   width: 100%;
   padding: 10px;
   border: 2px solid #ccc;
   border-radius: 4px;
 }
-
-button[type="submit"] 
-{
+button[type="submit"] {
   background: #ff9933;
   color: white;
   padding: 10px 20px;
@@ -357,77 +326,335 @@ button[type="submit"]
   border-radius: 4px;
   cursor: pointer;
 }
-
-button[type="submit"]:hover 
-{
+button[type="submit"]:hover {
   background: #cc6600;
 }
-  
-/* Contato Queimadas */
-.contato-queimadas 
-{
+
+/* CONTATO QUEIMADAS */
+.contato-queimadas {
   background: #af621b;
   padding: 10px;
   text-align: center;
 }
-
-.contato-queimadas h2 
-{
+.contato-queimadas h2 {
   color: #333;
   margin-bottom: 10px;
 }
-
-.contato-queimadas p 
-{
+.contato-queimadas p {
   color: white;
   font-size: 1.2em;
 }
-  
-/* Footer */
-.footer 
-{
+
+/* FOOTER */
+.footer {
   text-align: center;
   padding: 10px 0;
   background-color: #ff9933;
   color: white;
-  margin-top: auto;
 }
 
-#cadastro-nome:invalid 
-{
-  border-color: #dc3545;
-}
-
-#cadastro-nome:valid 
-{
-  border-color: #28a745;
-}
-  
-/* Responsividade */
-@media (max-width: 768px) 
-{
-  .menu 
-  {
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+  .menu {
     flex-direction: column;
     align-items: flex-start;
   }
-
-  .menu-nav ul 
-  {
+  .menu-nav ul {
     flex-direction: column;
     align-items: flex-start;
   }
-
-  .introducao 
-  {
+  .introducao {
     font-size: 2em;
     padding: 30px 10px;
   }
-
-  .menu-logo a
-  {
+  .menu-logo a {
     font-size: 1.5em;
   }
 }
- 
+
+
+
+/* FORMULÁRIO DE CADASTRO */
+.cadastro-bg {
+  background-image: url('../img/FotoFundoFogo.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.cadastrar-form {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 700px;
+}
+
+.cadastrar-form .introducao {
+  font-size: 2.5em;
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 0;
+}
+
+/* Checkboxes customizados */
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 10px;
+  position: relative;
+  font-size: 16px;
+  user-select: none;
+}
+
+.custom-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.custom-checkbox .checkmark {
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border: 2px solid #ff8c00;
+  border-radius: 4px;
+  margin-right: 10px;
+  position: relative;
+  transition: 0.3s;
+}
+
+.custom-checkbox:hover input ~ .checkmark {
+  background-color: #f0f0f0;
+}
+
+.custom-checkbox input:checked ~ .checkmark {
+  background-color: #ff8c00;
+}
+
+.custom-checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.custom-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.custom-checkbox .checkmark:after {
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+/* Fumaça */
+.custom-checkbox input:checked + .checkmark::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  animation: smoke 2s ease-out forwards;
+}
+
+@keyframes smoke {
+  0% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-20px) scale(1.5);
+  }
+}
+
+/* Feedback visual para validação */
+.form-control:invalid {
+  border-color: #dc3545;
+}
+
+.form-control:valid {
+  border-color: #28a745;
+}
+
+.btn-primary {
+  background-color: #ff8c00;
+  border-color: #ff8c00;
+  font-weight: bold;
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+}
+
+.btn-primary:hover {
+  background-color: #e67e00;
+  border-color: #e67e00;
+}
+
+/* AJUSTES DE FORMULÁRIO COM CHECKBOX */
+.form-group input:not([type="checkbox"]),
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="checkbox"] {
+  width: auto;
+  height: auto;
+  accent-color: #ff9933;
+  cursor: pointer;
+  transform: scale(1.2);
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.form-check-label {
+  vertical-align: middle;
+  font-weight: bold;
+}
+/* Estilos permanentes para a página Quem Somos */
+.hero-quem-somos {
+  background: 
+    linear-gradient(to bottom, #aa5f15, rgba(255, 155, 6, 0.95)),
+    url('../img/80_Y29udmVyc2F0aW9uX2J1c2luZXNzLTA2.jpg') center/cover no-repeat fixed;
+  color: white;
+  padding: 120px 0;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-quem-somos::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    linear-gradient(to bottom, #aa5f15, rgba(255, 155, 6, 0.95));
+  z-index: -1;
+}
+
+.hero-quem-somos h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: white !important;
+}
+
+.hero-quem-somos p {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+
+
+.hero-quem-somos h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.hero-quem-somos p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.nossa-missao {
+  background-color: #fff8f0;
+  padding: 80px 0;
+}
+
+.card-missao {
+  background: white;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  height: 100%;
+  transition: transform 0.3s;
+}
+
+.card-missao:hover {
+  transform: translateY(-10px);
+}
+
+.card-missao i {
+  font-size: 2.5rem;
+  color: #ff8c00;
+  margin-bottom: 20px;
+}
+
+.equipe {
+  padding: 80px 0;
+}
+
+.membro-equipe {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.membro-equipe img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #ff8c00;
+  margin-bottom: 20px;
+}
+
+.membro-equipe h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.membro-equipe p.funcao {
+  color: #ff8c00;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.redes-sociais {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.redes-sociais a {
+  color: #333;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.redes-sociais a:hover {
+  color: #ff8c00;
+}
+
+@media (max-width: 768px) {
+  .hero-quem-somos {
+      padding: 80px 0;
+  }
   
+  .hero-quem-somos h1 {
+      font-size: 2.5rem;
+  }
+}

@@ -32,62 +32,80 @@
         </div>
     </header>
 
-    <section class="fundo-imagem" style="background-image: url('img/FotoFundoFogo.jpg'); background-size: cover; background-position: center; padding: 60px 20px; height: 100vh; position: relative;">
-        <div class="cadastrar-form bg-white p-4 rounded shadow" id="cadastrar-form" style="max-width: 500px; margin: auto;">
-            <h1 class="introducao mb-4 text-center">Cadastre-se</h1>
-            <form id="cadastro" method="POST" action="#">
-                <div class="form-group mb-3">
-                    <label for="cadastro-nome">Nome completo</label>
+    <section class="fundo-imagem cadastro-bg">
+        <div class="cadastrar-form" id="cadastrar-form">
+            <h1 class="introducao">Cadastre-se</h1>
+            <form id="cadastroForm" method="POST" action="#">
+                <div class="form-group">
+                    <label for="cadastro-nome" class="form-label">Nome completo</label>
                     <input type="text" class="form-control" id="cadastro-nome" placeholder="Seu nome completo" required>
                 </div>
 
                 <div class="form-group mb-3">
-                    <label for="cadastro-email">Endereço de email</label>
+                    <label for="cadastro-email" class="form-label">Endereço de email</label>
                     <input type="email" class="form-control" id="cadastro-email" placeholder="Seu email" required>
                 </div>
 
-                <div class="form-group mb-3">
-                    <label for="cadastro-tel">Número de telefone</label>
+                <div class="form-group">
+                    <label for="cadastro-tel" class="form-label">Número de telefone</label>
                     <input type="tel" class="form-control" id="cadastro-tel" placeholder="Seu telefone">
                 </div>
 
-                <div class="form-group mb-3">
-                    <label for="cadastro-senha">Senha</label>
+                <div class="form-group">
+                    <label for="cadastro-senha" class="form-label">Senha</label>
                     <input type="password" class="form-control" id="cadastro-senha" placeholder="Crie uma senha" required>
                 </div>
 
-                <div class="form-group mb-3">
-                    <label for="confirma-senha">Confirmar Senha</label>
+                <div class="form-group">
+                    <label for="confirma-senha" class="form-label">Confirmar Senha</label>
                     <input type="password" class="form-control" id="confirma-senha" name="confirma-senha" placeholder="Confirme sua senha" required>
                 </div>
 
-                <div class="mb-2">
-                    <label class="form-check-label" for="alerta-sms">Receber alertas via SMS </label>
-                    <input type="checkbox" class="form-check-input" id="alerta-sms">
-                </div>
+                <label class="custom-checkbox" for="alerta-sms">
+                    <input type="checkbox" id="alerta-sms">
+                    <span class="checkmark"></span>
+                    Receber alertas via SMS 
+                </label>
 
-                <div class="mb-2">
-                    <label class="form-check-label" for="alerta-email">Receber alertas via email</label>
-                    <input type="checkbox" class="form-check-input" id="alerta-email">
-                </div>
-
-                <div>
-                    <p class="text-center mb-4">Já tem conta? Faça login <a href="login.php">aqui</a>!</p>
-                </div>
-                <div>
-                    <p class="text-center mb-4">Já tem conta? Faça login <a href="login.php">aqui</a>!</p>
-                </div>
-                <div>
-                    <p class="text-center mb-4">Já tem conta? Faça login <a href="login.php">aqui</a>!</p>
-                </div>
+                <label class="custom-checkbox" for="alerta-email">
+                    <input type="checkbox" id="alerta-email">
+                    <span class="checkmark"></span>
+                    Receber alertas via e-mail
+                </label>
 
                 <button type="submit" class="btn btn-primary w-100">Enviar</button>
             </form>
         </div>
     </section>
 
-    <footer class="footer text-center mt-5">
-        <p>&copy; 2024 Fogo Zero. Todos os direitos reservados.</p>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>FogoZero</h5>
+                    <p>Iniciativa de educação ambiental para prevenção de queimadas e incêndios florestais.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Links Úteis</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="https://www.gov.br/ibama" target="_blank">IBAMA</a></li>
+                        <li><a href="https://www.gov.br/mma" target="_blank">Ministério do Meio Ambiente</a></li>
+                        <li><a href="https://www.bombeiros.rs.gov.br" target="_blank">Corpo de Bombeiros</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Redes Sociais</h5>
+                    <div class="social-links">
+                        <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <p class="text-center mb-0">&copy; 2025 FogoZero - Todos os direitos reservados.</p>
+        </div>
     </footer>
 
     <!-- Bootstrap JS -->

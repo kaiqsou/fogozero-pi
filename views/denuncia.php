@@ -58,10 +58,11 @@
                     <label for="arquivo">Anexar Arquivo:</label>
                     <input type="file" class="form-control-file" id="arquivo" name="arquivo">
                 </div>
-                <div class="mb-4">
-                    <label class="form-check-label" for="anonimo">Denúncia anônima</label>
-                    <input type="checkbox" class="form-check-input" id="anonimo" name="anonimo">
-                </div>
+                <label class="custom-checkbox" for="denuncia-anon">
+                    <input type="checkbox" id="denuncia-anon">
+                    <span class="checkmark"></span>
+                    Denúncia Anônima
+                </label>
                 <button type="submit" class="btn btn-primary w-100">Enviar</button>
             </form>
         </div>
@@ -82,8 +83,35 @@
     </section>
 
     <footer class="footer">
-        <p>&copy; 2024 Todos os direitos reservados.</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>FogoZero</h5>
+                    <p>Iniciativa de educação ambiental para prevenção de queimadas e incêndios florestais.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Links Úteis</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="https://www.gov.br/ibama" target="_blank">IBAMA</a></li>
+                        <li><a href="https://www.gov.br/mma" target="_blank">Ministério do Meio Ambiente</a></li>
+                        <li><a href="https://www.bombeiros.rs.gov.br" target="_blank">Corpo de Bombeiros</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Redes Sociais</h5>
+                    <div class="social-links">
+                        <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <p class="text-center mb-0">&copy; 2025 FogoZero - Todos os direitos reservados.</p>
+        </div>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"></script>
 </body>
 </html>
