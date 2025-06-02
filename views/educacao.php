@@ -139,25 +139,6 @@
             </div>
         </section>
 
-        <!-- Quiz Interativo -->
-        <section class="quiz-prevencao my-5 p-4 rounded">
-            <h2 class="text-center mb-4">Teste seu conhecimento</h2>
-            <div class="quiz-container">
-                <div class="quiz-pergunta">
-                    <p>O que você faria se visse alguém jogando uma bituca de cigarro acesa em área de vegetação seca?</p>
-                    <div class="d-grid gap-2">
-                        <button class="btn btn-outline-secondary quiz-opcao">A) Ignoraria, pois é apenas uma bituca</button>
-                        <button class="btn btn-outline-secondary quiz-opcao">B) Alertaria a pessoa sobre o perigo</button>
-                        <button class="btn btn-outline-secondary quiz-opcao">C) Chamaria os bombeiros imediatamente</button>
-                    </div>
-                    <button class="btn btn-warning mt-3" id="reveal-answer">Ver resposta correta</button>
-                    <div class="alert alert-success mt-3 d-none" id="resposta-correta">
-                        <strong>Resposta correta: B e C</strong> - O ideal é primeiro alertar a pessoa sobre o perigo e, se necessário, acionar os bombeiros (193) caso haja risco de incêndio.
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- Dicas do Corpo de Bombeiros -->
         <section class="painel-fogo-itens my-5">
             <h2>Dicas do Corpo de Bombeiros</h2>
@@ -270,24 +251,6 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Interação do quiz
-        document.getElementById('reveal-answer').addEventListener('click', function() {
-            document.getElementById('resposta-correta').classList.remove('d-none');
-        });
-        
-        // Destaque para opções do quiz
-        document.querySelectorAll('.quiz-opcao').forEach(button => {
-            button.addEventListener('click', function() {
-                document.querySelectorAll('.quiz-opcao').forEach(btn => {
-                    btn.classList.remove('active', 'btn-warning');
-                    btn.classList.add('btn-outline-secondary');
-                });
-                this.classList.remove('btn-outline-secondary');
-                this.classList.add('active', 'btn-warning');
-            });
-        });
-    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -32,7 +32,7 @@
         </div>
     </header>
 
-    <section class="fundo-imagem cadastro-bg">
+    <section class="img-bg">
         <div class="cadastrar-form" id="cadastrar-form">
             <h1 class="introducao">Cadastre-se</h1>
             <form id="cadastroForm" method="POST" action="#">

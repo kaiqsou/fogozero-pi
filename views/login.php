@@ -30,8 +30,8 @@
         </div>
     </header>
 
-    <section class="fundo-imagem" style="background-image: url('img/FotoFundoFogo.jpg'); background-size: cover; background-position: center; padding: 60px 20px; height: 100vh; position: relative;">
-        <div class="cadastrar-form bg-white p-4 rounded shadow" id="cadastrar-form" style="max-width: 500px; margin: auto;">
+    <section class="login-bg">
+        <div class="login-form" id="login-form">
             <h1 class="introducao mb-4 text-center">Login</h1>
             <form id="login">
 

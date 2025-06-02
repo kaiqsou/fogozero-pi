@@ -30,7 +30,7 @@
         </div>
     </header>
 
-    <section class="fundo-imagem" style="background-image: url('img/FotoFundoFogo.jpg'); background-size: cover; background-position: center; padding: 60px 20px; min-height: calc(100vh - 100px); position: relative;">
+    <section class="denuncia-bg">
         <div class="comentarios-form" id="comentarios-form">
             <h1 class="introducao">Denuncie</h1>
             <form enctype="multipart/form-data">
@@ -66,20 +66,21 @@
                 <button type="submit" class="btn btn-primary w-100">Enviar</button>
             </form>
         </div>
-    </section>
 
-    <section class="comentarios-lista" id="comentarios-lista">
-        <h2>Denúncias</h2>
+        <section class="comentarios-lista" id="comentarios-lista">
+            <h2>Denúncias</h2>
         <!-- Exemplo de comentários -->
-        <div class="comentario-item">
-            <p><strong>Nome:</strong> Maria da Silva</p>
-            <p><strong>Comentário:</strong> Posso dar uma dica? Precisamos de extintores de incêndios em todas as escolas.<p>
-        </div>
-        <div class="comentario-item">
-            <p><strong>Nome:</strong> João dos Santos</p>
-            <p><strong>Comentário:</strong> Meu  vizinho ateou Fogo na avenida. Há muita fumaça</p>
-        </div>
+            <div class="comentario-item">
+                <p><strong>Nome:</strong> Maria da Silva</p>
+                <p><strong>Comentário:</strong> Posso dar uma dica? Precisamos de extintores de incêndios em todas as escolas.<p>
+            </div>
+            <div class="comentario-item">
+                <p><strong>Nome:</strong> João dos Santos</p>
+                <p><strong>Comentário:</strong> Meu  vizinho ateou Fogo na avenida. Há muita fumaça</p>
+            </div>
         <!-- Fim dos exemplos de comentários -->
+        </section>
+
     </section>
 
     <footer class="footer">
