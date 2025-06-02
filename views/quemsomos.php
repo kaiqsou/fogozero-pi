@@ -1,5 +1,7 @@
 <?php
-    require_once "links.php";
+    require_once "global/links.php";
+    require_once "global/scripts.php";
+    require_once "global/footer.php";
 ?>
 
 <!DOCTYPE html>

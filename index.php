@@ -1,5 +1,5 @@
 <?php
-    require_once "views/links.php";
+    require_once "views/global/links.php";
 ?>
 
 <!DOCTYPE html>

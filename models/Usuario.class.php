@@ -36,7 +36,7 @@ class Usuario
     }
 
 
-        // métodos SET
+    // métodos SET
     public function setNome($nome)
     {
         $this -> nome = $nome;
