@@ -25,7 +25,7 @@
                 <ul>
                     <li><a href="#sobre">Sobre</a></li>
                     <li><a href="views/educacao.php">Educação</a></li>
-                    <li><a href="#mapas">Mapa</a></li>
+                    <!--<li><a href="#mapas">Mapa</a></li>-->
                     <li><a href="views/denuncia.php">Denuncie</a></li>
                     <!--<li><a href="views/quemsomos.php">Sobre Nós</a></li>-->
                     <li><a href="views/cadastro.php">Cadastre-se</a></li>
