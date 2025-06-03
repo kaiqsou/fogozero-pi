@@ -3,32 +3,44 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8" />
-    <title>Educação - FogoZero</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educação Ambiental - FogoZero</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<>
+    <!-- Menu Superior -->
+    <div class="superinfo-bg">
+        <div class="superinfo container">
+            <p><i class="fas fa-phone-alt"></i> Emergências: 193</p>
+        </div>
+    </div>
+
     <header class="menu-bg">
-        <div class="menu">
+        <div class="menu container">
             <div class="menu-logo">
-                <a href="../index.php">FogoZero</a>
+                <a href="index.html">FogoZero</a>
             </div>
             <nav class="menu-nav">
                 <ul>
-                    <li><a href="../index.php">Sobre</a></li>
-                    <li><a href="educacao.php">Educação</a></li>
-                    <li><a href="../index.php#mapas">Mapas</a></li>
-                    <li><a href="denuncia.php">Denuncie</a></li>
-                    <!--<li><a href="../index.php#quemsomos">Sobre Nós</a></li>-->
-                    <li><a href="login.php">Login</a></li>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="denuncia.html">Denuncie</a></li>
+                    <li><a href="educacao.html" aria-current="page">Educação</a></li>
+                    <li><a href="quemsomos.html">Quem Somos</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    
-     <section class="hero-educacao">
+
+    <!-- Hero Section -->
+    <section class="hero-educacao">
         <div class="container">
             <h1>Educação Ambiental</h1>
             <p class="lead">Conheça, previna e proteja nosso meio ambiente contra queimadas e incêndios florestais</p>
@@ -86,7 +98,7 @@
                     </ul>
                 </div>
                 <div class="col-md-6">
-                    <img src="../img/impactoqueimadas.jpg" alt="Impacto das queimadas na floresta" class="img-fluid rounded">
+                    <img src="img/impactoqueimadas.jpg" alt="Impacto das queimadas na floresta" class="img-fluid rounded">
                 </div>
             </div>
         </section>
@@ -96,7 +108,7 @@
             <h2>Como Prevenir Queimadas</h2>
             <div class="row">
                 <div class="col-md-6">
-                    <img src="../img/prevencao-queimadas.jpg.jpg" alt="Técnicas de prevenção de queimadas" class="img-fluid rounded mb-3">
+                    <img src="img/prevencao-queimada.jpg" alt="Técnicas de prevenção de queimadas" class="img-fluid rounded mb-3">
                 </div>
                 <div class="col-md-6">
                     <div class="accordion" id="accordionPrevencao">
@@ -218,7 +230,42 @@
             </div>
         </section>
     </main>
-    
+
+    <!-- Rodapé 
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>FogoZero</h5>
+                    <p>Iniciativa de educação ambiental para prevenção de queimadas e incêndios florestais.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Links Úteis</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="https://www.gov.br/ibama" target="_blank">IBAMA</a></li>
+                        <li><a href="https://www.gov.br/mma" target="_blank">Ministério do Meio Ambiente</a></li>
+                        <li><a href="https://www.bombeiros.rs.gov.br" target="_blank">Corpo de Bombeiros</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Redes Sociais</h5>
+                    <div class="social-links">
+                        <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <p class="text-center mb-0">&copy; 2025 FogoZero - Todos os direitos reservados.</p>
+        </div>
+    </footer> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+    <script src="js/script.js"></script>
+                                    
     <?php require_once "global/footer.php"; require_once "global/scripts.php"; ?>
 
 </body>
