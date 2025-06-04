@@ -25,8 +25,9 @@
                 <ul>
                     <li><a href="#sobre">Sobre</a></li>
                     <li><a href="views/educacao.php">Educação</a></li>
+                    <li><a href="views/relatos.php">Relatos</a></li>
                     <!--<li><a href="#mapas">Mapa</a></li>-->
-                    <li><a href="views/denuncia.php">Denuncie</a></li>
+                    <li><a href="views/denuncia.php">Denunciar</a></li>
                     <!--<li><a href="views/quemsomos.php">Sobre Nós</a></li>-->
                     <li><a href="views/cadastro.php">Cadastre-se</a></li>
                     <li><a href="views/login.php">Login <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
