@@ -19,7 +19,7 @@
             </div>
             <nav class="menu-nav">
                 <ul>
-                    <li><a href="../index.php">Sobre</a></li>
+                    <li><a href="../index.php">Início</a></li>
                     <li><a href="educacao.php">Educação</a></li>
                     <li><a href="../index.php#mapas">Mapas</a></li>
                     <li><a href="denuncia.php">Denuncie</a></li>

@@ -19,9 +19,9 @@
             </div>
             <nav class="menu-nav">
                 <ul>
-                    <li><a href="../index.php#sobre">Sobre</a></li>
+                    <li><a href="../index.php">Início</a></li>
                     <li><a href="educacao.php">Educação</a></li>
-                    <li><a href="../index.php#mapas">Mapas</a></li>
+                    <!--<li><a href="../index.php#mapas">Mapas</a></li>-->
                     <li><a href="denuncia.php">Denuncie</a></li>
                     <!-- <li><a href="quemsomos.php">Sobre Nós</a></li> -->
                     <li><a href="cadastro.php">Cadastre-se</a></li>
@@ -32,7 +32,7 @@
 
     <section class="login-bg">
         <div class="login-form" id="login-form">
-            <h1 class="introducao mb-4 text-center">Login</h1>
+            <h1 class="introducao mb-4 text-center">Login </h1>
             <form id="login">
 
                 <div class="form-group mb-4">

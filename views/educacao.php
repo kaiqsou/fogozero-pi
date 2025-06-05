@@ -17,7 +17,7 @@
             </div>
             <nav class="menu-nav">
                 <ul>
-                    <li><a href="../index.php/index.php#sobre">Sobre</a></li>
+                    <li><a href="../index.php">Início</a></li>
                     <li><a href="educacao.php">Educação</a></li>
                     <li><a href="relatos.php">Relatos</a></li>
                     <!--<li><a href="#mapas">Mapa</a></li>-->
