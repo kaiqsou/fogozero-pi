@@ -23,7 +23,7 @@
             </div>
             <nav class="menu-nav">
                 <ul>
-                    <li><a href="#sobre">Sobre</a></li>
+                   
                     <li><a href="views/educacao.php">Educação</a></li>
                     <li><a href="views/relatos.php">Relatos</a></li>
                     <!--<li><a href="#mapas">Mapa</a></li>-->
