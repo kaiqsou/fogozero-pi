@@ -7,12 +7,16 @@ class Usuario
         private string $nome = "",
         private string $email = "",
         private string $senha = "",
-        int $ddd = 0,
-        string $numero = ""
-    )
-    {
-        $this -> telefone[] = new Telefone($ddd, $numero);
-    }
+        private string $cpf = "",
+        private string $cep = "",
+        private string $cidade = "",
+        private string $estado = "",
+        private string $bairro = "",
+        private string $rua = "",
+        private string $latitude = "",
+        private string $longitude = "",
+        private string $imagem = ""
+    ){}
 
     // métodos GET
     public function getNome()
@@ -30,11 +34,6 @@ class Usuario
         return $this -> senha;
     }
 
-    public function getTelefone()
-    {
-        return $this -> telefone;
-    }
-
 
     // métodos SET
     public function setNome($nome)
@@ -50,11 +49,6 @@ class Usuario
     public function setSenha($senha)
     {
         $this -> senha = $senha;
-    }
-
-    public function setTelefone(int $ddd, string $numero)
-    {
-          $this -> telefone = new Telefone($ddd, $numero);
     }
 }
 

@@ -6,8 +6,9 @@ class Feedback
     (
         private string $data = "",
         private string $comentario = "",
-        private string $arquivo = ""
-     // private $denuncia = null ?
+        private string $arquivo = "",
+        private $usuario = null
+
     ){}
 
     // métodos GET
@@ -24,11 +25,6 @@ class Feedback
     public function getArquivo()
     {
         return $this -> arquivo;
-    }
-
-    public function getDenuncia() // ?
-    {
-        return $this -> denuncia;
     }
 
 

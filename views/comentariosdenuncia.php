@@ -1,6 +1,6 @@
 <?php
     require_once "global/links.php";
-    require_once "global/conexao.php"; // Aqui usamos PDO
+    require_once "global/conexao.php";
 ?>
 
 <!DOCTYPE html>
@@ -10,7 +10,7 @@
     <meta charset="UTF-8" />
     <title>Comentários das Denúncias</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="../css/style.css"> <!-- Ajuste o caminho se necessário -->
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
@@ -34,30 +34,6 @@
     <main class="comentarios-bg">
         <section class="comentarios-lista" id="comentarios-lista">
             <h1 class="introducao">Todos os Comentários de Denúncias</h1>
-
-            <?php
-                try {
-                    $stmt = $pdo->prepare("SELECT nome, comentario FROM denuncias ORDER BY id DESC");
-                    $stmt->execute();
-
-                    $comentarios = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-                    if ($comentarios) {
-                        foreach ($comentarios as $comentario) {
-                            $nome = htmlspecialchars($comentario['nome']);
-                            $texto = htmlspecialchars($comentario['comentario']);
-                            echo "<div class='comentario-item'>";
-                            echo "<p><strong>Nome:</strong> " . ($nome ?: "Anônimo") . "</p>";
-                            echo "<p><strong>Comentário:</strong> $texto</p>";
-                            echo "</div>";
-                        }
-                    } else {
-                        echo "<p>Nenhuma denúncia registrada ainda.</p>";
-                    }
-                } catch (PDOException $e) {
-                    echo "<p>Erro ao carregar comentários: " . $e->getMessage() . "</p>";
-                }
-            ?>
         </section>
 
         <div style="text-align: center; margin: 2rem 0;">

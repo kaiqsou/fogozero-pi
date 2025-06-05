@@ -5,7 +5,7 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8" />
     <title>Quem Somos - Fogo Zero</title>

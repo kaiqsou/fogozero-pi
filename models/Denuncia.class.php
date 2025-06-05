@@ -4,12 +4,16 @@
     {
             public function __construct(
                 private string $descricao = "",
+             // private string $localizacao = "",
                 private string $latitude = "",
                 private string $longitude = "",
                 private string $data = "", 
                 private string $comentario,
                 private string $arquivo,
-                private $usuario = null
+                private enum $status,
+                private $usuario = null,
+                private $alerta = null,
+                private $feedback = null
             )
             {
                 $this -> localizacao = new Localizacao($latitude, $longitude);  // daria certo? ou é melhor $localização lá em cima mesmo?
@@ -19,6 +23,16 @@
             public function getDescricao()
             {
                 return $this -> descricao;
+            }
+
+            public function getLatitude()
+            {
+                return $this -> latitude;
+            }
+
+            public function getLongitude()
+            {
+                return $this -> longitude;
             }
 
             public function getData()
@@ -36,9 +50,19 @@
                 return $this -> arquivo;
             }
 
+            public function getStatus()
+            {
+                return $this -> status;
+            }
+
             public function getUsuario()
             {
                 return $this -> usuario;
+            }
+
+            public function getFeedback()
+            {
+                return $this -> feedback;
             }
 
             public function getLocalizacao()
@@ -50,6 +74,16 @@
             public function setDescricao($descricao)
             {
                 $this -> descricao = $descricao;
+            }
+
+            public function setLatitude($latitude)
+            {
+                $this -> latitude = $latitude;
+            }
+
+            public function setLongitude($longitude)
+            {
+                $this -> longitude = $longitude;
             }
 
             public function setData($data)
@@ -67,10 +101,19 @@
                 $this -> arquivo = $arquivo;
             }
 
+            public function setStatus($status)
+            {
+                $this -> status = $status;
+            }
 
             public function setUsuario($usuario)
             {
                 $this -> usuario = $usuario;
+            }
+
+            public function setFeedback($feedback)
+            {
+                $this -> feedback = $feedback;
             }
 
 
