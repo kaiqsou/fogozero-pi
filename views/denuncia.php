@@ -64,11 +64,6 @@
                     <label for="arquivo">Anexar Arquivo:</label>
                     <input type="file" class="form-control-file" id="arquivo" name="arquivo">
                 </div>
-                <label class="custom-checkbox" for="denuncia-anon">
-                    <input type="checkbox" id="denuncia-anon">
-                    <span class="checkmark"></span>
-                    Denúncia Anônima
-                </label>
                 <button type="submit" class="btn btn-primary w-100">Enviar</button>
             </form>
         </div>  

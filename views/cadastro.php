@@ -63,16 +63,10 @@
                     <input type="password" class="form-control" id="confirma-senha" name="confirma-senha" placeholder="Confirme sua senha" required>
                 </div>
 
-                <label class="custom-checkbox" for="alerta-sms">
-                    <input type="checkbox" id="alerta-sms">
-                    <span class="checkmark"></span>
-                    Receber alertas via SMS 
-                </label>
-
                 <label class="custom-checkbox" for="alerta-email">
                     <input type="checkbox" id="alerta-email">
                     <span class="checkmark"></span>
-                    Receber alertas via e-mail
+                    Desejo receber alertas de incêndios próximos a mim.
                 </label>
 
                 <button type="submit" class="btn btn-primary w-100">Enviar</button>
