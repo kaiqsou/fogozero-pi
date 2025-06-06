@@ -71,22 +71,7 @@
                 </label>
                 <button type="submit" class="btn btn-primary w-100">Enviar</button>
             </form>
-        </div>
-
-        <section class="comentarios-lista" id="comentarios-lista">
-            <h2>Denúncias</h2>
-        <!-- Exemplo de comentários -->
-            <div class="comentario-item">
-                <p><strong>Nome:</strong> Maria da Silva</p>
-                <p><strong>Comentário:</strong> Posso dar uma dica? Precisamos de extintores de incêndios em todas as escolas.<p>
-            </div>
-            <div class="comentario-item">
-                <p><strong>Nome:</strong> João dos Santos</p>
-                <p><strong>Comentário:</strong> Meu  vizinho ateou Fogo na avenida. Há muita fumaça</p>
-            </div>
-        <!-- Fim dos exemplos de comentários -->
-        </section>
-
+        </div>  
     </section>
 
     <?php require_once "global/footer.php"; require_once "global/scripts.php"; ?>
