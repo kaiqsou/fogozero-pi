@@ -40,25 +40,17 @@
             <form id="cadastroForm" method="POST" action="#">
                 <div class="form-group">
                     <label for="cadastro-nome" class="form-label">Nome completo</label>
-                    <input type="text" class="form-control" id="cadastro-nome" placeholder="Seu nome completo" required>
-                </div>
-
-                <div class="form-group mb-3">
+                    <input type="text" class="form-control" id="cadastro-nome" placeholder="Seu nome completo" required><br>
+  
                     <label for="cadastro-email" class="form-label">Endereço de email</label>
-                    <input type="email" class="form-control" id="cadastro-email" placeholder="Seu email" required>
-                </div>
+                    <input type="email" class="form-control" id="cadastro-email" placeholder="Seu email" required><br>
 
-                <div class="form-group">
                     <label for="cadastro-tel" class="form-label">Número de telefone</label>
-                    <input type="tel" class="form-control" id="cadastro-tel" placeholder="Seu telefone">
-                </div>
+                    <input type="tel" class="form-control" id="cadastro-tel" placeholder="Seu telefone"><br>
 
-                <div class="form-group">
                     <label for="cadastro-senha" class="form-label">Senha</label>
-                    <input type="password" class="form-control" id="cadastro-senha" placeholder="Crie uma senha" required>
-                </div>
-
-                <div class="form-group">
+                    <input type="password" class="form-control" id="cadastro-senha" placeholder="Crie uma senha" required><br>
+   
                     <label for="confirma-senha" class="form-label">Confirmar Senha</label>
                     <input type="password" class="form-control" id="confirma-senha" name="confirma-senha" placeholder="Confirme sua senha" required>
                 </div>
@@ -68,6 +60,36 @@
                     <span class="checkmark"></span>
                     Desejo receber alertas de incêndios próximos a mim.
                 </label>
+
+                <!-- Abaixo está as informações adicionais de cadastro -->
+
+                <div class="form-group" style="display:none">
+                    <label for="cadastro-cep" class="form-label">CEP</label>
+                    <input type="text" class="form-control" id="cadastro-cep" placeholder="Seu CEP"><br>
+
+                    <label for="cadastro-cidade" class="form-label">Cidade</label>
+                    <input type="text" class="form-control" id="cadastro-cidade" placeholder="Sua cidade"><br>
+
+                    <!-- É melhor a seleção de estado padrão ou como select?
+                    <label for="cadastro-estado" class="form-label">Estado</label>
+                    <input type="text" class="form-control" id="cadastro-estado" placeholder="Seu estado"><br>
+                    -->
+
+                    <label for="cadastro-estado" class="form-label">Estado</label>
+                    <select name="opcoes-estado"> 
+                        <option value="selecao-vazia">Selecione</option>
+                        <option value="sp">São Paulo</option>
+                    </select><br><br>
+
+                    <label for="cadastro-bairro" class="form-label">Bairro</label>
+                    <input type="text" class="form-control" id="cadastro-bairro" placeholder="Seu bairro"><br>
+
+                    <label for="cadastro-rua" class="form-label">Rua</label>
+                    <input type="text" class="form-control" id="cadastro-rua" placeholder="Sua rua"><br>
+
+                    <label for="cadastro-numero" class="form-label">Número</label>
+                    <input type="text" class="form-control" id="cadastro-numero" placeholder="Número da residência"><br>
+                </div>
 
                 <button type="submit" class="btn btn-primary w-100">Enviar</button>
             </form>
