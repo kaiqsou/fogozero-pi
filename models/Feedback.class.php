@@ -27,7 +27,6 @@ class Feedback
         return $this -> arquivo;
     }
 
-
     // métodos SET
     public function setData($data)
     {

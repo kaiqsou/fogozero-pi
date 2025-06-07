@@ -1,11 +1,16 @@
 /* RESET E BASE */
-* {
+
+* 
+{
   box-sizing: border-box;
 }
-body, h1, h2, p, ul, li, a {
+
+body, h1, h2, p, ul, li, a 
+{
   margin: 0;
   padding: 0;
 }
+
 body {
   font-family: "Nunito", Arial, Helvetica, sans-serif;
   color: #222222;
@@ -354,8 +359,6 @@ button[type="submit"]:hover {
   }
 }
 
-
-
 /* FORMULÁRIO DE CADASTRO */
 .img-bg {
   background-image: url('../img/FotoFundoFogo.jpg');
@@ -377,7 +380,6 @@ button[type="submit"]:hover {
   width: 100%;
   max-width: 600px;
 }
-
 
 .denuncia-bg
 {
@@ -581,7 +583,6 @@ input[type="checkbox"] {
 .hero-quem-somos p {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
-
 
 
 .hero-quem-somos h1 {

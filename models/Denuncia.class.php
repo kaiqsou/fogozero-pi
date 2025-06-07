@@ -8,9 +8,9 @@
                 private string $latitude = "",
                 private string $longitude = "",
                 private string $data = "", 
-                private string $comentario,
-                private string $arquivo,
-                private enum $status,
+                private string $comentario = "",
+                private string $arquivo = "",
+                private boolean $status = true,
                 private $usuario = null,
                 private $alerta = null,
                 private $feedback = null
