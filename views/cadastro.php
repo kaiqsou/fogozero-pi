@@ -25,10 +25,10 @@
                     <li><a href="educacao.php">Educação</a></li>
                     <li><a href="denuncia.php">Denuncie</a></li>
                     <!--<li><a href="quemsomos.php">Sobre Nós</a></li>-->
-                               <li><a href="login.php"> Login
-        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
-        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
-        </svg></a></li>
+                    <li><a href="login.php"> Login
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+                        </svg></a></li>
                 </ul>
             </nav>
         </div>
@@ -37,25 +37,26 @@
     <section class="img-bg">
         <div class="cadastrar-form" id="cadastrar-form">
             <h1 class="introducao">Cadastre-se</h1>
-            <form id="cadastroForm" method="POST" action="#">
+            <form id="cadastroForm" method="POST" action="salvar-cadastro.php">
+
                 <div class="form-group">
                     <label for="cadastro-nome" class="form-label">Nome completo</label>
-                    <input type="text" class="form-control" id="cadastro-nome" placeholder="Seu nome completo" required>
+                    <input type="text" class="form-control" id="cadastro-nome" name="cadastro-nome" placeholder="Seu nome completo" required>
                 </div>
 
                 <div class="form-group mb-3">
                     <label for="cadastro-email" class="form-label">Endereço de email</label>
-                    <input type="email" class="form-control" id="cadastro-email" placeholder="Seu email" required>
+                    <input type="email" class="form-control" id="cadastro-email" name="cadastro-email" placeholder="Seu email" required>
                 </div>
 
                 <div class="form-group">
                     <label for="cadastro-tel" class="form-label">Número de telefone</label>
-                    <input type="tel" class="form-control" id="cadastro-tel" placeholder="Seu telefone">
+                    <input type="tel" class="form-control" id="cadastro-tel" name="cadastro-telefone" placeholder="Seu telefone">
                 </div>
 
                 <div class="form-group">
                     <label for="cadastro-senha" class="form-label">Senha</label>
-                    <input type="password" class="form-control" id="cadastro-senha" placeholder="Crie uma senha" required>
+                    <input type="password" class="form-control" id="cadastro-senha" name="cadastro-senha" placeholder="Crie uma senha" required>
                 </div>
 
                 <div class="form-group">
@@ -64,13 +65,13 @@
                 </div>
 
                 <label class="custom-checkbox" for="alerta-sms">
-                    <input type="checkbox" id="alerta-sms">
+                    <input type="checkbox" id="alerta-sms" name="alerta-sms" value="1">
                     <span class="checkmark"></span>
                     Receber alertas via SMS 
                 </label>
 
                 <label class="custom-checkbox" for="alerta-email">
-                    <input type="checkbox" id="alerta-email">
+                    <input type="checkbox" id="alerta-email" name="alerta-email" value="1">
                     <span class="checkmark"></span>
                     Receber alertas via e-mail
                 </label>
@@ -80,7 +81,7 @@
         </div>
     </section>
 
-   <?php require_once "global/footer.php"; require_once "global/scripts.php"; ?>
-    
+    <?php require_once "global/footer.php"; /*require_once "global/scripts.php";*/ ?>
+
 </body>
 </html>
