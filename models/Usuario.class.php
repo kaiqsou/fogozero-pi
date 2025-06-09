@@ -13,8 +13,7 @@ class Usuario
         private string $estado = "",
         private string $bairro = "",
         private string $rua = "",
-        private string $latitude = "",
-        private string $longitude = "",
+        private string $numero = "",
         private string $imagem = ""
     ){}
 
@@ -34,6 +33,45 @@ class Usuario
         return $this -> senha;
     }
 
+    public function getCpf()
+    {
+        return $this -> cpf;
+    }
+
+    public function getCep()
+    {
+        return $this -> cep;
+    }
+
+    public function getCidade()
+    {
+        return $this -> cidade;
+    }
+
+    public function getEstado()
+    {
+        return $this -> estado;
+    }
+
+    public function getBairro()
+    {
+        return $this -> bairro;
+    }
+
+    public function getRua()
+    {
+        return $this -> rua;
+    }
+
+    public function getNumero()
+    {
+        return $this -> numero;
+    }
+
+    public function getImagem()
+    {
+        return $this -> imagem;
+    }
 
     // métodos SET
     public function setNome($nome)

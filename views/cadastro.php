@@ -48,44 +48,30 @@
                     <label for="cadastro-email" class="form-label">Endereço de email</label>
                     <input type="email" class="form-control" id="cadastro-email" name="cadastro-email" placeholder="Seu email" required>
                 </div>
-                    <input type="text" class="form-control" id="cadastro-nome" placeholder="Seu nome completo" required><br>
-  
-                    <label for="cadastro-email" class="form-label">Endereço de email</label>
-                    <input type="email" class="form-control" id="cadastro-email" placeholder="Seu email" required><br>
-
+                <div>
                     <label for="cadastro-tel" class="form-label">Número de telefone</label>
                     <input type="tel" class="form-control" id="cadastro-tel" name="cadastro-telefone" placeholder="Seu telefone">
                 </div>
-                    <input type="tel" class="form-control" id="cadastro-tel" placeholder="Seu telefone"><br>
-
+                <div>
                     <label for="cadastro-senha" class="form-label">Senha</label>
                     <input type="password" class="form-control" id="cadastro-senha" name="cadastro-senha" placeholder="Crie uma senha" required>
                 </div>
-
                 <div class="form-group">
-                    <input type="password" class="form-control" id="cadastro-senha" placeholder="Crie uma senha" required><br>
-   
                     <label for="confirma-senha" class="form-label">Confirmar Senha</label>
                     <input type="password" class="form-control" id="confirma-senha" name="confirma-senha" placeholder="Confirme sua senha" required>
                 </div>
 
-                <label class="custom-checkbox" for="alerta-sms">
-                    <input type="checkbox" id="alerta-sms" name="alerta-sms" value="1">
-                    <span class="checkmark"></span>
-                    Receber alertas via SMS 
-                </label>
-
                 <label class="custom-checkbox" for="alerta-email">
-                    <input type="checkbox" id="alerta-email" name="alerta-email" value="1">
+                    <input type="checkbox" id="alerta-email" name="alerta-email" onclick="verificar(this)">
                     <span class="checkmark"></span>
                     Desejo receber alertas de incêndios próximos a mim.
                 </label>
 
-                <button type="submit" class="btn btn-primary w-100">Enviar</button>
+                
 
                 <!-- Abaixo está as informações adicionais de cadastro -->
 
-                <div class="form-group" style="display:none">
+                <div class="form-group" id="endereco" style="display:none">
                     <div class="container">
                         <div class="row">
                             <div class="col">
@@ -118,13 +104,27 @@
                         <div>
                     </div>
                 </div>
-
-                <!-- Não aparece por algum motivo: <button type="submit" class="btn btn-primary w-100">Enviar</button> -->
+            </div>
+            </div>
+                <button type="submit" class="btn btn-primary w-100" style="display:inline">Enviar</button>
             </form>
         </div>
     </section>
 
-    <?php require_once "global/footer.php"; /*require_once "global/scripts.php";*/ ?>
+    <?php require_once "global/footer.php"; require_once "global/scripts.php"; ?>
+    <script>
+        function verificar(elemento)
+        {
+            if (elemento.checked)
+            {
+                document.querySelector("#endereco").style = "display:inline-block";
+            }
+            else 
+            {
+                document.querySelector("#endereco").style = "display:none";
+            }
+        }
+    </script>
 
 </body>
 </html>

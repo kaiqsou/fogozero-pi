@@ -10,7 +10,7 @@
                 private string $data = "", 
                 private string $comentario = "",
                 private string $arquivo = "",
-                private boolean $status = true,
+                //private boolean $status_denuncia = true,
                 private $usuario = null,
                 private $alerta = null,
                 private $feedback = null

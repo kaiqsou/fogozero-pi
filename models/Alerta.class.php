@@ -5,7 +5,7 @@
         public function __construct
         (
             private string $conteudo = "",
-            private datetime $data = null
+            private string $data = ""
         ){}
 
         // métodos GET

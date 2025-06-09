@@ -1,5 +1,7 @@
+/*
 CREATE DATABASE fogozero;
 USE fogozero;
+*/
 
 CREATE TABLE IF NOT EXISTS usuarios
 (
@@ -14,8 +16,6 @@ CREATE TABLE IF NOT EXISTS usuarios
     bairro VARCHAR(100),
 	rua VARCHAR(100),
     numero VARCHAR(15),
-    latitude VARCHAR(11),   
-    longitude VARCHAR(11),
     imagem VARCHAR(255)
 );
 
@@ -35,30 +35,30 @@ CREATE TABLE IF NOT EXISTS denuncias
     data_denuncia DATETIME NOT NULL,
     comentario VARCHAR(255),
     arquivo VARCHAR(255) NOT NULL,
-    estado_denuncia TINYINT NOT NULL,
+    status_denuncia TINYINT NOT NULL DEFAULT 1,
 	
-    usuario_id BIGINT NULL,
-    FOREIGN KEY (usuario_id) REFERENCES usuarios(id_usuario),
-    alerta_id BIGINT NULL,
-    FOREIGN KEY (alerta_id) REFERENCES alertas(id_alerta),
-    feedback_id BIGINT NULL,
-    FOREIGN KEY (feedback_id) REFERENCES feedbacks(id_feedback)
+    usuario_id BIGINT NOT NULL,
+    FOREIGN KEY (usuario_id) REFERENCES usuarios(id_usuario)
 );
 
 CREATE TABLE IF NOT EXISTS alertas
 (
 	id_alerta BIGINT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    conteudo VARCHAR(255) NOT NULL,
     data_hora DATETIME NOT NULL,
+
+    denuncia_id BIGINT NOT NULL,
+    FOREIGN KEY (denuncia_id) REFERENCES denuncias(id_denuncia)
 );
 
 CREATE TABLE IF NOT EXISTS feedbacks
 (
 	id_feedback BIGINT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    comentario VARCHAR(255),
+    comentario VARCHAR(255) NOT NULL,
     data_feedback DATETIME NOT NULL,
     arquivo VARCHAR(255),
     
-    usuario_id BIGINT NULL,
-    FOREIGN KEY (usuario_id) REFERENCES usuarios(id_usuario)
+    usuario_id BIGINT NOT NULL,
+    FOREIGN KEY (usuario_id) REFERENCES usuarios(id_usuario),
+    denuncia_id BIGINT NOT NULL,
+    FOREIGN KEY (denuncia_id) REFERENCES denuncias(id_denuncia)
 );

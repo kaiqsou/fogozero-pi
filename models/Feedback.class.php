@@ -7,7 +7,8 @@ class Feedback
         private string $data = "",
         private string $comentario = "",
         private string $arquivo = "",
-        private $usuario = null
+        private $usuario = null,
+        private $denuncia = null
 
     ){}
 
