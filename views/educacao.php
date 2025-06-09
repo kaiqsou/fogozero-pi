@@ -37,7 +37,6 @@
         <div class="container">
             <h1>Educação Ambiental</h1>
             <p class="lead">Conheça, previna e proteja nosso meio ambiente contra queimadas e incêndios florestais</p>
-            <a href="#conteudo-principal" class="btn btn-lg btn-warning">Comece a aprender</a>
         </div>
     </section>
 
@@ -107,11 +106,11 @@
                     <div class="accordion" id="accordionPrevencao">
                         <div class="accordion-item">
                             <h3 class="accordion-header">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#infos_nao_fazer">
                                     <i class="fas fa-ban me-2"></i> O que NÃO fazer
                                 </button>
                             </h3>
-                            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionPrevencao">
+                            <div id="infos_nao_fazer" class="accordion-collapse collapse show" data-bs-parent="#accordionPrevencao">
                                 <div class="accordion-body">
                                     <ul>
                                         <li>Não queime lixo ou restos de poda</li>

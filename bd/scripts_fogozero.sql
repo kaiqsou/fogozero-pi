@@ -7,19 +7,20 @@ CREATE TABLE IF NOT EXISTS usuarios
     nome VARCHAR(100) NOT NULL,
     email VARCHAR(255) UNIQUE NOT NULL,
     senha VARCHAR(255) NOT NULL,
-    telefone VARCHAR(15) NOT NULL UNIQUE,
     cpf VARCHAR(14) UNIQUE,
     cep VARCHAR(8),
+    cidade VARCHAR(100),
+    estado VARCHAR(50),
+    bairro VARCHAR(100),
 	rua VARCHAR(100),
     numero VARCHAR(15),
-    bairro VARCHAR(100),
-    estado VARCHAR(50),
-    cidade VARCHAR(100),
+    latitude VARCHAR(11),   
+    longitude VARCHAR(11),
     imagem VARCHAR(255)
 );
 
 /* 
-INSERT INTO usuarios(nome, email, senha, telefone) VALUES("kaique", "kaiqsouza2004@hotmail.com", "123456", "14991144192"); 
+INSERT INTO usuarios(nome, email, senha) VALUES("kaique", "kaiqsouza2004@hotmail.com", "123456"); 
 
 SELECT * FROM usuarios;
 */
@@ -29,25 +30,19 @@ CREATE TABLE IF NOT EXISTS denuncias
 	id_denuncia BIGINT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     descricao VARCHAR(100),
     localizacao VARCHAR(255) NOT NULL,
-    latitude DECIMAL(15,14),    /* ou 10,8 */
-    longitude DECIMAL(15,14),   /* ou 11,8 */
+    latitude VARCHAR(11),   
+    longitude VARCHAR(11),
     data_denuncia DATETIME NOT NULL,
     comentario VARCHAR(255),
     arquivo VARCHAR(255) NOT NULL,
+    estado_denuncia TINYINT NOT NULL,
 	
     usuario_id BIGINT NULL,
-    FOREIGN KEY (usuario_id) REFERENCES usuarios(id_usuario)
-);
-
-CREATE TABLE IF NOT EXISTS codigos
-(
-	id_codigo BIGINT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    codigo VARCHAR(6) NOT NULL,
-    data_utilizacao DATETIME NOT NULL,
-    tempo_expiracao DATETIME NOT NULL,
-    
-    denuncia_id BIGINT NOT NULL,
-    FOREIGN KEY (denuncia_id) REFERENCES denuncias(id_denuncia)
+    FOREIGN KEY (usuario_id) REFERENCES usuarios(id_usuario),
+    alerta_id BIGINT NULL,
+    FOREIGN KEY (alerta_id) REFERENCES alertas(id_alerta),
+    feedback_id BIGINT NULL,
+    FOREIGN KEY (feedback_id) REFERENCES feedbacks(id_feedback)
 );
 
 CREATE TABLE IF NOT EXISTS alertas
@@ -55,20 +50,15 @@ CREATE TABLE IF NOT EXISTS alertas
 	id_alerta BIGINT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     conteudo VARCHAR(255) NOT NULL,
     data_hora DATETIME NOT NULL,
-    
-    usuario_id BIGINT NOT NULL,
-    FOREIGN KEY (usuario_id) REFERENCES usuarios(id_usuario)
 );
 
 CREATE TABLE IF NOT EXISTS feedbacks
 (
 	id_feedback BIGINT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    data_feedback DATETIME NOT NULL,
     comentario VARCHAR(255),
+    data_feedback DATETIME NOT NULL,
     arquivo VARCHAR(255),
     
-    denuncia_id BIGINT NOT NULL,
-    FOREIGN KEY (denuncia_id) REFERENCES denuncias(id_denuncia),
     usuario_id BIGINT NULL,
     FOREIGN KEY (usuario_id) REFERENCES usuarios(id_usuario)
 );

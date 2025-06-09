@@ -41,6 +41,7 @@
 
                 <div class="form-group">
                     <label for="cadastro-nome" class="form-label">Nome completo</label>
+<<<<<<< HEAD
                     <input type="text" class="form-control" id="cadastro-nome" name="cadastro-nome" placeholder="Seu nome completo" required>
                 </div>
 
@@ -48,35 +49,89 @@
                     <label for="cadastro-email" class="form-label">Endereço de email</label>
                     <input type="email" class="form-control" id="cadastro-email" name="cadastro-email" placeholder="Seu email" required>
                 </div>
+=======
+                    <input type="text" class="form-control" id="cadastro-nome" placeholder="Seu nome completo" required><br>
+  
+                    <label for="cadastro-email" class="form-label">Endereço de email</label>
+                    <input type="email" class="form-control" id="cadastro-email" placeholder="Seu email" required><br>
+>>>>>>> 4c0834f41a91124117d539bc979926ec64203b84
 
-                <div class="form-group">
                     <label for="cadastro-tel" class="form-label">Número de telefone</label>
+<<<<<<< HEAD
                     <input type="tel" class="form-control" id="cadastro-tel" name="cadastro-telefone" placeholder="Seu telefone">
                 </div>
+=======
+                    <input type="tel" class="form-control" id="cadastro-tel" placeholder="Seu telefone"><br>
+>>>>>>> 4c0834f41a91124117d539bc979926ec64203b84
 
-                <div class="form-group">
                     <label for="cadastro-senha" class="form-label">Senha</label>
+<<<<<<< HEAD
                     <input type="password" class="form-control" id="cadastro-senha" name="cadastro-senha" placeholder="Crie uma senha" required>
                 </div>
 
                 <div class="form-group">
+=======
+                    <input type="password" class="form-control" id="cadastro-senha" placeholder="Crie uma senha" required><br>
+   
+>>>>>>> 4c0834f41a91124117d539bc979926ec64203b84
                     <label for="confirma-senha" class="form-label">Confirmar Senha</label>
                     <input type="password" class="form-control" id="confirma-senha" name="confirma-senha" placeholder="Confirme sua senha" required>
                 </div>
 
+<<<<<<< HEAD
                 <label class="custom-checkbox" for="alerta-sms">
                     <input type="checkbox" id="alerta-sms" name="alerta-sms" value="1">
                     <span class="checkmark"></span>
                     Receber alertas via SMS 
                 </label>
 
+=======
+>>>>>>> 4c0834f41a91124117d539bc979926ec64203b84
                 <label class="custom-checkbox" for="alerta-email">
                     <input type="checkbox" id="alerta-email" name="alerta-email" value="1">
                     <span class="checkmark"></span>
-                    Receber alertas via e-mail
+                    Desejo receber alertas de incêndios próximos a mim.
                 </label>
 
                 <button type="submit" class="btn btn-primary w-100">Enviar</button>
+
+                <!-- Abaixo está as informações adicionais de cadastro -->
+
+                <div class="form-group" style="display:none">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <label for="cadastro-cep" class="form-label">CEP</label>
+                                <input type="text" class="form-control" id="cadastro-cep" placeholder="Seu CEP"><br>
+                            </div>
+                            <div class="col">
+                                <label for="cadastro-cidade" class="form-label">Cidade</label>
+                                <input type="text" class="form-control" id="cadastro-cidade" placeholder="Sua cidade"><br>
+                            </div>
+                            <!-- É melhor a seleção de estado padrão ou como select? -->
+                            <div class="col">
+                                <label for="cadastro-estado" class="form-label">Estado</label>
+                                <input type="text" class="form-control" id="cadastro-estado" placeholder="Seu estado"><br>
+                            </div>
+                        </div>
+
+                        <label for="cadastro-rua" class="form-label">Rua</label>
+                        <input type="text" class="form-control" id="cadastro-rua" placeholder="Sua rua"><br>
+
+                        <div class="row">
+                            <div class="col">
+                                <label for="cadastro-bairro" class="form-label">Bairro</label>
+                                <input type="text" class="form-control" id="cadastro-bairro" placeholder="Seu bairro"><br>
+                            </div>
+                            <div class="col">
+                                <label for="cadastro-numero" class="form-label">Número</label>
+                                <input type="text" class="form-control" id="cadastro-numero" placeholder="Número da residência"><br>   
+                            </div>
+                        <div>
+                    </div>
+                </div>
+
+                <!-- Não aparece por algum motivo: <button type="submit" class="btn btn-primary w-100">Enviar</button> -->
             </form>
         </div>
     </section>
