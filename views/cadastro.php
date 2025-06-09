@@ -41,7 +41,6 @@
 
                 <div class="form-group">
                     <label for="cadastro-nome" class="form-label">Nome completo</label>
-<<<<<<< HEAD
                     <input type="text" class="form-control" id="cadastro-nome" name="cadastro-nome" placeholder="Seu nome completo" required>
                 </div>
 
@@ -49,44 +48,33 @@
                     <label for="cadastro-email" class="form-label">Endereço de email</label>
                     <input type="email" class="form-control" id="cadastro-email" name="cadastro-email" placeholder="Seu email" required>
                 </div>
-=======
                     <input type="text" class="form-control" id="cadastro-nome" placeholder="Seu nome completo" required><br>
   
                     <label for="cadastro-email" class="form-label">Endereço de email</label>
                     <input type="email" class="form-control" id="cadastro-email" placeholder="Seu email" required><br>
->>>>>>> 4c0834f41a91124117d539bc979926ec64203b84
 
                     <label for="cadastro-tel" class="form-label">Número de telefone</label>
-<<<<<<< HEAD
                     <input type="tel" class="form-control" id="cadastro-tel" name="cadastro-telefone" placeholder="Seu telefone">
                 </div>
-=======
                     <input type="tel" class="form-control" id="cadastro-tel" placeholder="Seu telefone"><br>
->>>>>>> 4c0834f41a91124117d539bc979926ec64203b84
 
                     <label for="cadastro-senha" class="form-label">Senha</label>
-<<<<<<< HEAD
                     <input type="password" class="form-control" id="cadastro-senha" name="cadastro-senha" placeholder="Crie uma senha" required>
                 </div>
 
                 <div class="form-group">
-=======
                     <input type="password" class="form-control" id="cadastro-senha" placeholder="Crie uma senha" required><br>
    
->>>>>>> 4c0834f41a91124117d539bc979926ec64203b84
                     <label for="confirma-senha" class="form-label">Confirmar Senha</label>
                     <input type="password" class="form-control" id="confirma-senha" name="confirma-senha" placeholder="Confirme sua senha" required>
                 </div>
 
-<<<<<<< HEAD
                 <label class="custom-checkbox" for="alerta-sms">
                     <input type="checkbox" id="alerta-sms" name="alerta-sms" value="1">
                     <span class="checkmark"></span>
                     Receber alertas via SMS 
                 </label>
 
-=======
->>>>>>> 4c0834f41a91124117d539bc979926ec64203b84
                 <label class="custom-checkbox" for="alerta-email">
                     <input type="checkbox" id="alerta-email" name="alerta-email" value="1">
                     <span class="checkmark"></span>
