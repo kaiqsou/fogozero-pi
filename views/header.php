@@ -34,6 +34,9 @@
                         <li>
                             <a href="index.php?controle=inicioController&metodo=educacao">Educação</a>
                         </li>
+                        <li>
+                            <a href="#">Relatos</a>
+                        </li>
                     <?php 
                     
                     if(isset($_SESSION["nome"]))
