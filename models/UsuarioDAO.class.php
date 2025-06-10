@@ -11,7 +11,7 @@
 		public function autenticacao($usuario)
 		{
 			// por segurança, não informar diretamente email e senha
-			$sql = "SELECT nome, tipo FROM usuarios WHERE email = ? AND senha = ?";
+			$sql = "SELECT nome FROM usuarios WHERE email = ? AND senha = ?";
 			try
 			{
 				$stm = $this -> db -> prepare($sql);

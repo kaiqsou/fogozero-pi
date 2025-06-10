@@ -1,5 +1,11 @@
 <?php
 
+    enum Status
+    {
+        case ACTIVE;
+        case INACTIVE;
+    }
+
     class Denuncia
     {
             public function __construct(
@@ -10,14 +16,11 @@
                 private string $data = "", 
                 private string $comentario = "",
                 private string $arquivo = "",
-                //private boolean $status_denuncia = true,
+                private Status $status = Status::ACTIVE,
                 private $usuario = null,
                 private $alerta = null,
                 private $feedback = null
-            )
-            {
-                $this -> localizacao = new Localizacao($latitude, $longitude);  // daria certo? ou é melhor $localização lá em cima mesmo?
-            }
+            ){}
 
             // métodos GET
             public function getDescricao()

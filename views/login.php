@@ -10,12 +10,12 @@
 
                 <div class="form-group mb-4">
                     <label for="login-email">Endereço de email</label>
-                    <input type="email" class="form-control" id="login-email" placeholder="Digite seu email" required>
+                    <input type="email" class="form-control" name="login-email" placeholder="Digite seu email" required>
                 </div>
 
                 <div class="form-group mb-4">
                     <label for="login-senha">Senha</label>
-                    <input type="password" class="form-control" id="login-senha" placeholder="Digite sua senha" required>
+                    <input type="password" class="form-control" name="login-senha" placeholder="Digite sua senha" required>
                 </div>
 
                 <div>
