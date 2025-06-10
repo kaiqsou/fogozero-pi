@@ -25,5 +25,10 @@
 		{
 			require_once "views/relatos.php";
 		}
+
+			public function quemsomos()
+		{
+			require_once "views/quemsomos.php";
+		}
 	}
 ?>
