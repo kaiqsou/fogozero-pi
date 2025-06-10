@@ -12,7 +12,8 @@
 			}
 			catch (PDOException $e)
 			{
-				die("Problema com conexão do banco de dados");
+				header("location:index.php?controle=usuarioController&metodo=login");
+				die();
 				echo $e -> getCode(); // getCode é da própria linguagem
 				echo $e -> getMessage(); // pega a mensagem de erro
 			}
