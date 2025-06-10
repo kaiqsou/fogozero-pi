@@ -11,16 +11,6 @@
         const senha = document.getElementById("cadastro-senha").value;
         const confirmarSenha = document.getElementById("confirma-senha").value;
 
-        if (nome === "") {
-            alert("Por favor, preencha seu nome.");
-            e.preventDefault();
-        }
-
-        if (senha.length < 6) {
-            alert("A senha deve ter no mínimo 6 caracteres.");
-            e.preventDefault();
-        }
-
         if (senha !== confirmarSenha) {
             alert("As senhas não coincidem.");
             e.preventDefault();
