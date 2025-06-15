@@ -10,7 +10,7 @@
 			{
 				$this -> db = new PDO($parametros, "root", "");
 			}
-			catch (PDOException $e)
+			catch (PDOException $e)	
 			{
 				header("location:index.php?controle=usuarioController&metodo=login");
 				die();

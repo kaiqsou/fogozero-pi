@@ -16,17 +16,7 @@
 			require_once "views/educacao.php";
 		}
 
-		public function denuncia()
-		{
-			require_once "views/denuncia.php";
-		}
-
-		public function relatos()
-		{
-			require_once "views/relatos.php";
-		}
-
-			public function quemsomos()
+		public function quemsomos()
 		{
 			require_once "views/quemsomos.php";
 		}

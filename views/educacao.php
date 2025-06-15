@@ -1,4 +1,9 @@
 <?php
+    if(!isset($_SESSION))
+    {
+        session_start();
+    }
+
     require_once "header.php";
     require_once "global/links.php";
 ?>
@@ -40,9 +45,21 @@
                             <i class="fas fa-phone-alt fa-3x mb-3" style="color: #ff6600;"></i>
                             <h2>Faça sua Parte</h2>
                             <p>Saiba como denunciar queimadas ilegais e proteger nossa natureza.</p>
-                            <a href="index.php?controle=inicioController&metodo=denuncia" class="mt-4 btn btn-outline-warning">Denuncie aqui</a>
+                            <?php
+                            if(isset($_SESSION["nome"]))
+                            {
+                                echo "<a href='index.php?controle=denunciaController&metodo=inicio' 
+                                class='mt-4 btn btn-outline-warning'>Denuncie aqui</a>";
+                            }
+                            else 
+                            {
+                                echo "<a href='index.php?controle=inicioController&metodo=cadastro' 
+                                class='mt-4 btn btn-outline-warning'>Denuncie aqui</a>";
+                            }
+                            ?>
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>

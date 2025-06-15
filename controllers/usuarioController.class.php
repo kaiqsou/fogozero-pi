@@ -19,19 +19,19 @@
 				$usuarioDAO = new usuarioDAO();
 				
 				$retorno = $usuarioDAO->autenticacao($usuario);
-							if(count($retorno) > 0)
-							{
-								$_SESSION["nome"] = $retorno[0]->nome;
-								$_SESSION["mensagem"] = "Login efetuado com sucesso";
-								header("location:index.php");
-								die();
-							}
-							else
-							{
-								$_SESSION["mensagem"] = "Problema nas credenciais";
-								header("location:login.php");
-    						die();
-							}
+				if(count($retorno) > 0)
+				{
+					$_SESSION["nome"] = $retorno[0]->nome;
+					$_SESSION["mensagem"] = "Login efetuado com sucesso";
+					header("location:index.php");
+					die();
+				}
+				else
+				{
+					$_SESSION["mensagem"] = "Problema nas credenciais";
+					header("location:login.php");
+					die();
+				}
 
 			}
 				require_once "views/login.php";
@@ -39,7 +39,6 @@
         
 		public function logout()
 		{
-			
 			$_SESSION = array();
 			session_destroy();
 			header("location:index.php");

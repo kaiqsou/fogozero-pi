@@ -1,50 +1,75 @@
 <?php
     require_once "header.php";
+
+    if(!isset($_SESSION))
+    {
+        session_start();
+    }
 ?>
 
-    <section class="denuncia-bg">
-        <div class="comentarios-form" id="comentarios-form">
-            <h1 class="introducao">Denuncie</h1>
-            <form enctype="multipart/form-data">
-                <div class="form-group">
+<?php 
 
-                    <div class="container">
-                    <div class="row">
-                        <div class="col">
-                            <label for="nome">Descrição:</label>
-                            <input type="text" class="form-control" id="nome" name="nome" placeholder="Descreva a denúncia" required><br>
-                        </div>
-                        <div class="col">
-                            <label for="local">Local:</label>
-                            <input type="text" class="form-control" id="local" name="local" placeholder="Digite a localização" required>
-                        </div>
-                    </div><br>
+    if(isset($_SESSION["nome"]))
+    {
+        echo "
+        <section class='denuncia-bg'>
+            <div class='comentarios-form' id='comentarios-form'>
+                <h1 class='introducao'>Denuncie</h1>
+                <form action='index.php?controle=denunciaController&metodo=inserir' method='POST'>
+                    <div class='form-group'>
 
-                    <div class="container">
-                    <div class="row">
+                        <div class='container'>
+                        <div class='row'>
+                            <div class='col'>
+                                <label for='nome'>Descrição:</label>
+                                <input type='text' class='form-control' id='descricao' name='descricao' placeholder='Descreva a denúncia'><br>
+                                <div style='color:red;font-size:12px;'><?php echo $msg[0];?></div>
+                            </div>
+                            <div class='col'>
+                                <label for='local'>Local:</label>
+                                <input type='text' class='form-control' id='localizacao' name='localizacao' placeholder='Digite a localização'>
+                                <div style='color:red;font-size:12px;'><?php echo $msg[1];?></div>
+                            </div>
+                        </div><br>
 
-                        <div class="col">
-                            <label for="data">Data:</label>
-                            <input type="date" class="form-control" id="data" name="data" required>
-                        </div>
-                        <div class="col">
-                            <label for="hora">Hora:</label>
-                            <input type="time" class="form-control" id="hora" name="hora" required>
-                        </div>
-                    </div><br>
+                        <div class='container'>
+                        <div class='row'>
 
-                    <label for="comentario">Comentário:</label>
-                    <textarea class="form-control" id="comentario" name="comentario" rows="4" required></textarea><br>
-                </div>
+                            <div class='col'>
+                                <label for='data'>Data:</label>
+                                <input type='date' class='form-control' id='data' name='data', placeholder='Digite a data'>
+                                <div style='color:red;font-size:12px;'><?php echo $msg[2];?></div>
+                            </div>
+                            <div class='col'>
+                                <label for='hora'>Hora:</label>
+                                <input type='time' class='form-control' id='hora' name='hora' placeholder='Digite a hora'>
+                                <div style='color:red;font-size:12px;'><?php echo $msg[3];?></div>
+                            </div>
+                        </div><br>
 
-                <label for="arquivo">Anexar Arquivo:</label>
-                <input type="file" class="form-control-file" id="arquivo" name="arquivo">
-                <button type="submit" class="btn btn-primary w-100">Enviar</button>
-            </form>
-        </div>  
-    </section>
+                        <label for='comentario'>Comentário:</label>
+                        <textarea class='form-control' id='comentario' name='comentario' rows='4'></textarea><br>
+                    </div>
 
-    <?php require_once "footer.php"; require_once "global/scripts.php"; ?>
-    
+                    <label for='arquivo'>Anexar Arquivo:</label>
+                    <input type='file' class='form-control-file' id='arquivo' name='arquivo'>
+
+                    <input type='submit' class='btn btn-primary w-100' value='Enviar'>
+                </form>
+            </div>  
+        </section>
+
+        <?php require_once 'footer.php'; require_once 'global/scripts.php'; ?>";
+    }
+    else 
+    {
+        // ver que erro que está dando aqui
+        echo "<h1>Permissões negadas.</h1>";    
+        echo "<a href='index.php?controle=inicioController&metodo=inicio'>Voltar</a>";
+    }
+
+    require_once "footer.php";
+?>
+
 </body>
 </html>

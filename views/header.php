@@ -35,10 +35,10 @@
                             <a href="index.php?controle=inicioController&metodo=educacao">Educação</a>
                         </li>
                         <li>
-                            <a href="#">Relatos</a>
+                            <a href="index.php?controle=denunciaController&metodo=denuncias">Últimas Denúncias</a>
                         </li>
                         <li>
-                            <a href="inicio.php?controle=inicioController&metodo=quemsomos">Quem Somos</a>
+                            <a href="index.php?controle=inicioController&metodo=quemsomos">Quem Somos</a>
                         </li>
                     <?php 
                     
@@ -46,7 +46,7 @@
                     {
                         echo "
                         <li>
-                            <a href='index.php?controle=inicioController&metodo=denuncia'>Denuncie</a>
+                            <a href='index.php?controle=denunciaController&metodo=inicio'>Denuncie</a>
                         </li>
                         <li>
                             <a href='index.php?controle=usuarioController&metodo=logout'>Sair</a>
