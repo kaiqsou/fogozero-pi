@@ -14,8 +14,8 @@
 			{
 				header("location:index.php?controle=usuarioController&metodo=login");
 				die();
-				echo $e -> getCode(); // getCode é da própria linguagem
-				echo $e -> getMessage(); // pega a mensagem de erro
+				echo $e -> getCode();
+				echo $e -> getMessage();
 			}
 		}
 	}

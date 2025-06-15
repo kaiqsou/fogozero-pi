@@ -12,6 +12,7 @@ class DenunciaDAO extends Conexao
 
     public function inserir($denuncia)
     {
+        // ajeitar o insert, conseguir o id do usuário e as outras informações
         $sql = "INSERT INTO denuncias(descricao, localizacao, data_denuncia, comentario) 
         VALUES(?, ?, ?, ?)";
         $stm = $this -> db -> prepare($sql);
