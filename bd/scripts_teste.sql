@@ -30,7 +30,7 @@ CREATE TABLE IF NOT EXISTS denuncias
     descricao VARCHAR(100),
     localizacao VARCHAR(255) NOT NULL,
     data_denuncia DATETIME NOT NULL,
-    comentario VARCHAR(255),
+    comentario VARCHAR(255)
 /*  arquivo VARCHAR(255) NOT NULL,
     status_denuncia TINYINT NOT NULL DEFAULT 1,
 	
