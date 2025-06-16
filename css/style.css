@@ -265,29 +265,6 @@ img {
   padding: 20px;
 }
 
-.comentarios-form,
-.comentarios-lista {
-  max-width: 700px;
-  margin: 60px auto;
-  background: rgba(255, 255, 255, 0.8);
-  border: 2px solid #ccc;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-.comentario-item {
-  border-bottom: 1px solid #ccc;
-  padding: 10px;
-  margin-bottom: 10px;
-}
-.comentario-item:last-child {
-  border-bottom: none;
-}
-.comentario-item strong {
-  color: #ff9933;
-}
-
-
 /* FORMULÁRIO GENÉRICO */
 .form-group {
   margin-bottom: 15px;
@@ -317,7 +294,7 @@ button[type="submit"]:hover {
   background: #cc6600;
 }
 
-/* CONTATO QUEIMADAS */
+/* CONTATO QUEIMADAS 
 .contato-queimadas {
   background: #af621b;
   padding: 10px;
@@ -330,7 +307,7 @@ button[type="submit"]:hover {
 .contato-queimadas p {
   color: white;
   font-size: 1.2em;
-}
+}*/
 
 /* FOOTER */
 .footer {
@@ -548,7 +525,7 @@ input[type="checkbox"] {
   vertical-align: middle;
   font-weight: bold;
 }
-/* Estilos permanentes para a página Quem Somos */
+/* Estilos permanentes para a página Quem Somos
 .hero-quem-somos {
   background: 
     linear-gradient(to bottom, #aa5f15, rgba(255, 155, 6, 0.95)),
@@ -674,12 +651,9 @@ input[type="checkbox"] {
   .hero-quem-somos h1 {
       font-size: 2.5rem;
   }
-}
+} */
 
-<<<<<<< HEAD
-=======
 .cadastro-endereco div
 {
   display: none;
 }
->>>>>>> 4c0834f41a91124117d539bc979926ec64203b84

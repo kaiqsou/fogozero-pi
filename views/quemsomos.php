@@ -26,127 +26,9 @@
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     
-    <style>
-        /* Estilos específicos para esta página */
-        .hero-quem-somos {
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/equipe-fogo-zero.jpg');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 120px 0;
-            text-align: center;
-        }
-        
-        .hero-quem-somos h1 {
-            font-size: 3.5rem;
-            font-weight: 800;
-            margin-bottom: 20px;
-        }
-        
-        .hero-quem-somos p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .nossa-missao {
-            background-color: #fff8f0;
-            padding: 80px 0;
-        }
-        
-        .card-missao {
-            background: white;
-            border-radius: 10px;
-            padding: 30px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            height: 100%;
-            transition: transform 0.3s;
-        }
-        
-        .card-missao:hover {
-            transform: translateY(-10px);
-        }
-        
-        .card-missao i {
-            font-size: 2.5rem;
-            color: #ff8c00;
-            margin-bottom: 20px;
-        }
-        
-        .equipe {
-            padding: 80px 0;
-        }
-        
-        .membro-equipe {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        
-        .membro-equipe img {
-            width: 200px;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 5px solid #ff8c00;
-            margin-bottom: 20px;
-        }
-        
-        .membro-equipe h3 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-        }
-        
-        .membro-equipe p.funcao {
-            color: #ff8c00;
-            font-weight: 600;
-            margin-bottom: 15px;
-        }
-        
-        .redes-sociais {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-        }
-        
-        .redes-sociais a {
-            color: #333;
-            font-size: 1.2rem;
-            transition: color 0.3s;
-        }
-        
-        .redes-sociais a:hover {
-            color: #ff8c00;
-        }
-        
-        @media (max-width: 768px) {
-            .hero-quem-somos {
-                padding: 80px 0;
-            }
-            
-            .hero-quem-somos h1 {
-                font-size: 2.5rem;
-            }
-        }
-    </style>
-</head>
-<body>
-    <header class="menu-bg">
-        <div class="menu">
-            <div class="menu-logo">
-                <a href="index.html">FogoZero</a>
-            </div>
-            <nav class="menu-nav">
-                <ul>
-                    <li><a href="index.html#sobre">Sobre</a></li>
-                    <li><a href="educacao.html">Educação</a></li>
-                    <li><a href="recebaalerta.html">Receba Alerta</a></li>
-                    <li><a href="denuncia.html">Denuncie</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
     
-    <main>
+</head>
+
         <!-- Hero Section -->
         <section class="hero-quem-somos">
             <div class="container">
@@ -154,7 +36,7 @@
                 <p>Conheça a equipe por trás do Fogo Zero e nossa missão no combate aos incêndios florestais</p>
             </div>
         </section>
-        
+    
         <!-- Nossa História -->
         <section class="container py-5">
             <div class="row align-items-center">
