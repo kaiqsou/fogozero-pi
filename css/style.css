@@ -96,6 +96,20 @@ img {
   margin: 0 auto;
 }
 
+/* CONTATO QUEIMADAS */
+.contato-queimadas {
+  background: linear-gradient(to bottom, #f8ba7b, rgba(246, 209, 153, 0.95)), url('../img/contato-queimadas.jpg') center/cover no-repeat fixed;
+  padding: 10px;
+  text-align: center;
+}
+.contato-queimadas h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+.contato-queimadas p {
+  color: white;
+  font-size: 1.2em;
+}
 
 /* SEÇÃO SOBRE */
 .sobre {
@@ -519,6 +533,7 @@ input[type="checkbox"] {
   padding: 120px 0;
   text-align: center;
   position: relative;
+   margin-bottom: 40px;
     border-bottom: 4px solid #ff6600;
   z-index: 1;
 }
@@ -658,7 +673,6 @@ input[type="checkbox"] {
 
 
 /* CADASTRO ENDEREÇO */
-
 
 .cadastro-endereco div
 {
