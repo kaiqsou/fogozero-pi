@@ -1,0 +1,12 @@
+- filtro das denúncias dos últimos 5 dias na página de exibição das denúncias
+-* descobrir a forma de possibilitar o recebimento de alertas por e-mail
+-* passar todos os parametros corretos na denúncia, principalmente usuario_id
+- usar RSS para últimas notícias
+- integrar com redes sociais
+- separar o CSS
+- arrumar página de "acesso negado" ao tentar acessar a página de denunciar
+- arrumar "quem somos"
+- fazer um header mais atrativo 
+-* hash da senha funcional
+-* arrumar cards que mostram informações das denúncias
+- tornar possível o "feedback" no site

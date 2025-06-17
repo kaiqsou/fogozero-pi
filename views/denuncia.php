@@ -12,8 +12,9 @@
     if(isset($_SESSION["nome"]))
     {
         echo "
+        <main>
         <section class='denuncia-bg'>
-            <div class='comentarios-form' id='comentarios-form'>
+            <div class='denuncia-form' id='comentarios-form'>
                 <h1 class='introducao'>Denuncie</h1>
                 <form action='index.php?controle=denunciaController&metodo=inserir' method='POST'>
                     <div class='form-group'>
@@ -58,16 +59,16 @@
                 </form>
             </div>  
         </section>
+        </main>";
 
-        <?php require_once 'footer.php'; require_once 'global/scripts.php'; ?>";
     }
     else 
     {
         // ver que erro que está dando aqui
         echo "<h1>Permissões negadas.</h1>";    
-        echo "<a href='index.php?controle=inicioController&metodo=inicio'>Voltar</a>";
+        echo "<a href='../index.php?controle=inicioController&metodo=inicio'>Voltar</a>";
     }
-
+    
     require_once "footer.php";
 ?>
 

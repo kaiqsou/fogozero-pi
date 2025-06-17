@@ -367,12 +367,23 @@ button[type="submit"]:hover {
   max-width: 600px;
 }
 
+.denuncia-form
+{
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 800px;
+}
+
 .denuncia-bg
 {
   background-image: url('../img/FotoFundoFogo.jpg');
   background-size: cover;
   background-position: fixed;
   justify-content: center;
+  display: flex;
   align-items: center;
   min-height: 100vh;
   padding: 20px;
