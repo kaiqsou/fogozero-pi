@@ -6,16 +6,15 @@ CREATE TABLE IF NOT EXISTS usuarios
     id_usuario BIGINT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(100) NOT NULL,
     email VARCHAR(255) UNIQUE NOT NULL,
-    cpf VARCHAR(14) UNIQUE,
-    telefone VARCHAR(14) UNIQUE,
+    telefone VARCHAR(14) UNIQUE DEFAULT NULL,
     senha VARCHAR(255) NOT NULL,
-    cep VARCHAR(8),
-    cidade VARCHAR(100),
-    estado VARCHAR(50),
-    bairro VARCHAR(100),
-	rua VARCHAR(100),
-    numero VARCHAR(15),
-    imagem VARCHAR(255)
+    cep VARCHAR(10) DEFAULT NULL,
+    cidade VARCHAR(100) DEFAULT NULL,
+    estado VARCHAR(50) DEFAULT NULL,
+    bairro VARCHAR(100) DEFAULT NULL,
+	rua VARCHAR(100) DEFAULT NULL,
+    numero VARCHAR(15) DEFAULT NULL,
+    imagem VARCHAR(255) DEFAULT NULL
 );
 
 INSERT INTO usuarios(nome, email, senha) VALUES("kaique", "kaiqsouza2004@hotmail.com", "123456"); 

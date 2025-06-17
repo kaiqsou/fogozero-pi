@@ -8,7 +8,13 @@
 
 		public function cadastro()
 		{
+			$msg = ["", "", "", ""];
 			require_once "views/cadastro.php";
+		}
+
+		public function login()
+		{
+			require_once "views/login.php";
 		}
 
 		public function educacao()

@@ -14,7 +14,7 @@
 
     <section class="comentarios-lista" id="comentarios-lista">
         <?php 
-        if (isset($retorno) && !empty($retorno)) {
+        if ($retorno) {
             foreach ($retorno as $dado) {
                 $dataFormatada = date("d/m/Y H:i", strtotime($dado->data_denuncia));
 

@@ -6,8 +6,8 @@ class Usuario
     (
         private string $nome = "",
         private string $email = "",
+        private string $telefone = "",
         private string $senha = "",
-        private string $cpf = "",
         private string $cep = "",
         private string $cidade = "",
         private string $estado = "",
@@ -28,14 +28,14 @@ class Usuario
         return $this -> email;
     }
 
+    public function getTelefone()
+    {
+        return $this -> telefone;
+    }
+
     public function getSenha()
     {
         return $this -> senha;
-    }
-
-    public function getCpf()
-    {
-        return $this -> cpf;
     }
 
     public function getCep()
