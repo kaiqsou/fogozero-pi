@@ -2,6 +2,8 @@
 
 class Usuario
 {
+    private int $id_usuario;
+    
     public function __construct
     (
         private string $nome = "",

@@ -31,6 +31,7 @@
 
         public function inserir()
         {
+            session_start();
             $msg = ["", "", "", ""];
             $erro = false;
 
@@ -47,29 +48,15 @@
                     $msg[1] = "Preencha o local";
                     $erro = true;
                 }
-                
-                if(empty($_POST["data"]))
-                {
-                    $msg[2] = "Preencha a data";
-                    $erro = true;
-                }
-
-                if(empty($_POST["hora"]))
-                {
-                    $msg[3] = "Preencha a hora";
-                    $erro = true;
-                }
 
                 if (!$erro) 
                 {
-                    $dataHora = $_POST["data"] . " " . $_POST["hora"];
                     $denuncia = new Denuncia
-                    (
-                        0, 
+                    ( 
                         $_POST["descricao"], 
-                        $_POST["localizacao"], 
-                        $dataHora,
-                        $_POST["comentario"]
+                        $_POST["localizacao"],
+                        $_POST["comentario"],
+                        $_SESSION["id"]
                     );
                     
                     $denunciaDAO = new DenunciaDAO();

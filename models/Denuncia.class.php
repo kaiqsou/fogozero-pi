@@ -6,20 +6,22 @@
         case INACTIVE;
     }
 
+    
     class Denuncia
     {
+        private int $id_denuncia;
+
         public function __construct
         (
-            private int $id_denuncia = 0,
             private string $descricao = "",
             private string $localizacao = "",
             // private string $latitude = "",
             // private string $longitude = "",
             private string $data = "", 
-            private string $comentario = ""
+            private string $comentario = "",
             // private string $arquivo = "",
             // private Status $status = Status::ACTIVE,
-            // private $usuario = null,
+            private int $id_usuario = 1
             // private $alerta = null,
             // private $feedback = null
         ){}
@@ -29,8 +31,6 @@
         {
             return $this -> descricao;
         }
-
-
 
         public function getData()
         {
@@ -47,12 +47,16 @@
             return $this -> localizacao;
         }
 
+        public function getId_usuario()
+        {
+            return $this -> id_usuario;
+        }
+
         // métodos SET
         public function setDescricao($descricao)
         {
             $this -> descricao = $descricao;
         }
-
 
         public function setData($data)
         {

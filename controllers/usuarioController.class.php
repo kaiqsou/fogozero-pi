@@ -92,7 +92,8 @@
 				$retorno = $usuarioDAO->autenticacao($usuario);
 				if(count($retorno) > 0)
 				{
-					$_SESSION["nome"] = $retorno[0]->nome;
+					$_SESSION["id"] = $retorno[0]-> id_usuario;
+					$_SESSION["nome"] = $retorno[0]-> nome;
 					$_SESSION["mensagem"] = "Login efetuado com sucesso";
 					header("location:index.php");
 					die();

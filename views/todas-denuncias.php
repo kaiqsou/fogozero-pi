@@ -1,6 +1,5 @@
 <?php
     require_once "header.php";
-    require_once "global/links.php";
 
     if (isset($_GET["msg"])) {
         echo "<h3>{$_GET["msg"]}</h3>";
@@ -36,8 +35,7 @@
 </main>
 
 <?php 
-    require_once "footer.php"; 
-    require_once "global/scripts.php"; 
+    require_once "footer.php";  
 ?>
 </body>
 </html>

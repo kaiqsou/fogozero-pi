@@ -40,23 +40,26 @@
 
                 <div class="iframe-container">
 
-                <button class="botao_painel_do_fogo" onclick="myFunction()">Carregar Painel do Fogo</button>
+                <button class="botao_painel_do_fogo" onclick="carregarPainel()">Carregar Painel do Fogo</button>
 
                 <br><br>
 
-                <iframe 
-                    id="myFrame"
+                <iframe class="painel_hidden" 
+                    src="https://panorama.sipam.gov.br/painel-do-fogo/"
+                    id="framePainel"
                     width="900" 
                     height="800"
                     frameborder="0">
                 </iframe>
 
                 <script>
-                    function myFunction()  
+                    function carregarPainel()  
                     {
-                    document.getElementById("myFrame").src="https://panorama.sipam.gov.br/painel-do-fogo/";
+                        const painel = document.getElementById("framePainel");
+                        
+                        painel.className = painel.className === 'painel_hidden' ? 'painel_show' : 'painel_hidden';
                     }
-    </script>
+                </script>
                 </div>
 
             </div>

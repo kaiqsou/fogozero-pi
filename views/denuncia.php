@@ -36,16 +36,6 @@
                         <div class='container'>
                         <div class='row'>
 
-                            <div class='col'>
-                                <label for='data'>Data:</label>
-                                <input type='date' class='form-control' id='data' name='data', placeholder='Digite a data'>
-                                <div style='color:red;font-size:12px;'><?php echo $msg[2];?></div>
-                            </div>
-                            <div class='col'>
-                                <label for='hora'>Hora:</label>
-                                <input type='time' class='form-control' id='hora' name='hora' placeholder='Digite a hora'>
-                                <div style='color:red;font-size:12px;'><?php echo $msg[3];?></div>
-                            </div>
                         </div><br>
 
                         <label for='comentario'>Comentário:</label>

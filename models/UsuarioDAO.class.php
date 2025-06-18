@@ -9,12 +9,12 @@
 		
 		public function autenticacao($usuario)
 		{
-			$sql = "SELECT nome FROM usuarios WHERE email = ? AND senha = ?";
+			$sql = "SELECT * FROM usuarios WHERE email = ? AND senha = ?";
 			try
 			{
 				$stm = $this -> db -> prepare($sql);
 				$stm -> bindValue(1, $usuario -> getEmail());
-				$stm -> bindValue(2, $usuario -> getSenha());
+				$stm -> bindValue(2, $usuario -> getSenha());	
 				$stm -> execute();
 				$this -> db = null;
 				

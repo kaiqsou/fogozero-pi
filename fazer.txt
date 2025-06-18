@@ -10,3 +10,5 @@
 -* hash da senha funcional
 -* arrumar cards que mostram informações das denúncias
 - tornar possível o "feedback" no site
+- página admin
+- página de perfil para atualizar endereço

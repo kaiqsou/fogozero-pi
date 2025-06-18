@@ -732,3 +732,13 @@ input[type="checkbox"] {
   color: #444;
   line-height: 1.5;
 }
+
+.painel_hidden
+{
+  display: none;
+}
+
+.painel_show
+{
+  display:block;
+}

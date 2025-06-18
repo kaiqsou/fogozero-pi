@@ -2,29 +2,6 @@
     require_once "header.php";
     require_once "global/links.php";
 ?>  
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8" />
-    <title>Quem Somos - Fogo Zero</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Conheça a equipe por trás do Fogo Zero, nosso propósito e missão no combate aos incêndios florestais">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap" rel="stylesheet">
-    
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css" />
-</head>
-<body>
 
     <!--  Section -->
     <section class="quem-somos">
@@ -42,10 +19,10 @@
             <div class="col-lg-6">
                 <h2 class="mb-4">Nossa História</h2>
                 <p>
-                    Em 2024, um grupo de estudantes da FATEC Jahu se uniu para desenvolver um projeto acadêmico voltado à prevenção de incêndios florestais. O que começou como um desafio de sala de aula se tornou uma missão de vida.
+                    Em 2024, um grupo de estudantes da FATEC Jahu se uniu para desenvolver um projeto acadêmico voltado à prevenção de incêndios florestais. O que começou como um desafio de sala de aula se tornou uma missão de vida.<br><br>
                 </p>
                 <p>
-                    Com o apoio da comunidade acadêmica e o desejo de causar impacto positivo, nasceu o <strong>Fogo Zero</strong>: uma iniciativa que alia tecnologia, educação ambiental e responsabilidade social.
+                    Com o apoio da comunidade acadêmica e o desejo de causar impacto positivo, nasceu o <strong>FogoZero</strong>: uma iniciativa que alia tecnologia, educação ambiental e responsabilidade social.<br><br>
                 </p>
                 <p>
                     Hoje, seguimos evoluindo como uma equipe multidisciplinar, comprometida em desenvolver soluções acessíveis para proteger vidas e o meio ambiente.
@@ -64,21 +41,21 @@
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="card-missao">
-                        <i class="fas fa-fire-extinguisher"></i>
+                        <i class="fas fa-fire-extinguisher"></i><br><br>
                         <h3>Combate a Incêndios</h3>
                         <p>Desenvolver tecnologias que ajudem no combate rápido e eficiente aos incêndios florestais, minimizando danos ambientais.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card-missao">
-                        <i class="fas fa-bell"></i>
+                        <i class="fas fa-bell"></i><br><br>
                         <h3>Sistema de Alertas</h3>
                         <p>Criar um sistema de alerta precoce para comunidades em risco, permitindo evacuações rápidas e organizadas.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card-missao">
-                        <i class="fas fa-graduation-cap"></i>
+                        <i class="fas fa-graduation-cap"></i><br><br>
                         <h3>Educação Ambiental</h3>
                         <p>Promover a conscientização sobre prevenção de incêndios e preservação ambiental através de programas educativos.</p>
                     </div>
@@ -90,11 +67,11 @@
     <!-- Nossa Equipe -->
     <section class="equipe">
         <div class="container">
-            <h2 class="text-center mb-5">Nossa Equipe</h2>
+            <h2 class="text-center mt-5 mb-5">Nossa Equipe</h2>
             <div class="row justify-content-center">
                 <div class="col-md-4">
                     <div class="membro-equipe">
-                        <img src="img/marina-frankin.jpg" alt="Marina Frankin">
+                        <img src="https://avatars.githubusercontent.com/u/181370670?v=4" alt="Marina Frankin">
                         <h3>Marina Frankin</h3>
                         <p class="funcao">Desenvolvedora de Software</p>
                         <p>Integrante do projeto Fogo Zero.</p>
@@ -107,7 +84,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="membro-equipe">
-                        <img src="img/tamires-talier.jpg" alt="Tamires Talier">
+                        <img src="https://avatars.githubusercontent.com/u/96202019?v=4" alt="Tamires Talier">
                         <h3>Tamires Talier</h3>
                         <p class="funcao">Desenvolvedora de Software</p>
                         <p>Integrante do projeto Fogo Zero.</p>
@@ -120,7 +97,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="membro-equipe">
-                        <img src="img/kaique-onencio.jpg" alt="Kaique Onencio">
+                        <img src="https://avatars.githubusercontent.com/u/99449012?v=4" alt="Kaique Onencio">
                         <h3>Kaique Onencio</h3>
                         <p class="funcao">Desenvolvedor de Software</p>
                         <p>Integrante do projeto Fogo Zero.</p>
@@ -166,3 +143,4 @@
 </html>
 <?php
     require_once "footer.php";      
+?>
