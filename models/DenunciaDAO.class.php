@@ -20,7 +20,7 @@ class DenunciaDAO extends Conexao
         $stm = $this -> db -> prepare($sql);
         $stm -> bindValue(1, $denuncia -> getDescricao());
         $stm -> bindValue(2, $denuncia -> getLocalizacao());
-        $stm -> bindValue(3, date('Y-m-d H:i'));
+        $stm -> bindValue(3, $denuncia -> getData());
         $stm -> bindValue(4, $denuncia -> getComentario());
         $stm -> bindValue(5, $denuncia -> getId_usuario());
         $stm -> execute();

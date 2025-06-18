@@ -32,7 +32,7 @@
         public function inserir()
         {
             session_start();
-            $msg = ["", "", "", ""];
+            $msg = ["", ""];
             $erro = false;
 
             if ($_POST)
@@ -53,8 +53,10 @@
                 {
                     $denuncia = new Denuncia
                     ( 
+                        0,
                         $_POST["descricao"], 
                         $_POST["localizacao"],
+                        date('Y-m-d H:i'),
                         $_POST["comentario"],
                         $_SESSION["id"]
                     );

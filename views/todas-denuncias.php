@@ -13,16 +13,18 @@
 
     <section class="comentarios-lista" id="comentarios-lista">
         <?php 
+   
+
         if ($retorno) {
             foreach ($retorno as $dado) {
                 $dataFormatada = date("d/m/Y H:i", strtotime($dado->data_denuncia));
-
                 echo "<div class='comentario-item'>
                         <p><strong>ID:</strong> {$dado->id_denuncia}</p>
                         <p><strong>Descrição:</strong> {$dado->descricao}</p>
                         <p><strong>Local:</strong> {$dado->localizacao}</p>
                         <p><strong>Data:</strong> {$dataFormatada}</p>
-                        <p><strong>Comentário:</strong> {$dado->comentario}</p>
+                        <p><strong>Comentário:</strong> {$dado -> comentario}</p>
+                        <p><strong>id usuario:</strong> {$dado -> usuario_id}</p>
                       </div>";
             }
         } else {

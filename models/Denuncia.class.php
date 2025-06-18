@@ -1,18 +1,12 @@
 <?php
-
-    enum Status
-    {
-        case ACTIVE;
-        case INACTIVE;
-    }
-
     
     class Denuncia
     {
-        private int $id_denuncia;
+        
 
         public function __construct
         (
+            private int $id_denuncia = 0,
             private string $descricao = "",
             private string $localizacao = "",
             // private string $latitude = "",
@@ -20,7 +14,7 @@
             private string $data = "", 
             private string $comentario = "",
             // private string $arquivo = "",
-            // private Status $status = Status::ACTIVE,
+            // private int $status = 1,
             private int $id_usuario = 1
             // private $alerta = null,
             // private $feedback = null
