@@ -1,6 +1,6 @@
 <?php
     require_once "header.php";
-    require_once "global/links.php";
+    $msg = ["", ""]
 ?>
 
     <section class="login-bg">
@@ -11,11 +11,13 @@
                 <div class="form-group mb-4">
                     <label for="login-email">Endereço de email</label>
                     <input type="email" class="form-control" name="login-email" placeholder="Digite seu email" required>
+                    <div style='color:red;font-size:12px;'><?php echo $msg[0];?></div>
                 </div>
 
                 <div class="form-group mb-4">
                     <label for="login-senha">Senha</label>
                     <input type="password" class="form-control" name="login-senha" placeholder="Digite sua senha" required>
+                    <div style='color:red;font-size:12px;'><?php echo $msg[1];?></div>
                 </div>
 
                 <div>
@@ -27,7 +29,7 @@
         </div>
     </section>
 
-    <?php require_once "footer.php"; require_once "global/scripts.php"; ?>
+    <?php require_once "footer.php";?>
 
     </body>
 </html>

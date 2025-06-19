@@ -14,15 +14,16 @@ class DenunciaDAO extends Conexao
 
     public function inserir($denuncia)
     {
-        // ajeitar o insert, conseguir o id do usuário e as outras informações
-        $sql = "INSERT INTO denuncias(descricao, localizacao, data_denuncia, comentario, usuario_id) 
-        VALUES(?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO denuncias(descricao, localizacao, data_denuncia, comentario, imagem, status_denuncia, usuario_id) 
+        VALUES(?, ?, ?, ?, ?, ?, ?)";
         $stm = $this -> db -> prepare($sql);
         $stm -> bindValue(1, $denuncia -> getDescricao());
         $stm -> bindValue(2, $denuncia -> getLocalizacao());
         $stm -> bindValue(3, $denuncia -> getData());
         $stm -> bindValue(4, $denuncia -> getComentario());
-        $stm -> bindValue(5, $denuncia -> getId_usuario());
+        $stm -> bindValue(5, $denuncia -> getImagem());
+        $stm -> bindValue(6, $denuncia -> getStatus());
+        $stm -> bindValue(7, $denuncia -> getUsuario_id());
         $stm -> execute();
         $this -> db = null;
 
@@ -44,6 +45,44 @@ class DenunciaDAO extends Conexao
 			$this -> db = null;
 			return "Problema ao buscar as denúncias";
 		}
+    }
+
+    public function buscar_denuncias_ativas($denuncia)
+    {
+        $sql = "SELECT * FROM denuncias WHERE status_denuncia = ?";
+
+        try 
+        {
+            $stm = $this -> db -> prepare($sql);
+				$stm -> bindValue(1, $denuncia -> getStatus());
+				$stm -> execute();
+
+				$this->db = null;
+
+				return $stm->fetchAll(PDO::FETCH_OBJ);
+        }
+        catch(PDOException $e)
+        {
+            $this->db = null;
+			return "Problema ao buscar todos os produtos";
+        }
+    }
+
+    public function mudar_status($denuncia)
+    {
+        $sql = "UPDATE denuncias SET status_denuncia = ? WHERE id_denuncia = ?";
+
+        try 
+        {
+            $stm = $this -> db -> prepare($sql);
+            $stm -> bindValue(1, $denuncia -> getStatus());
+            $stm -> bindValue(2, $denuncia -> getId_denuncia());
+        }
+        catch(PDOException $e)
+        {
+            $this->db = null;
+			return "Problema ao mudar o status";
+        }
     }
 }
 

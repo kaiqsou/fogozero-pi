@@ -2,38 +2,32 @@
     
     class Denuncia
     {
-        
+        private int $id_denuncia;
 
         public function __construct
         (
-            private int $id_denuncia = 0,
             private string $descricao = "",
             private string $localizacao = "",
             // private string $latitude = "",
             // private string $longitude = "",
-            private string $data = "", 
+            private string $data_denuncia = "", 
             private string $comentario = "",
-            // private string $arquivo = "",
-            // private int $status = 1,
-            private int $id_usuario = 1
+            private string $imagem = "",
+            private string $status_denuncia = "",
+            private int $usuario_id = 1
             // private $alerta = null,
             // private $feedback = null
         ){}
 
         // métodos GET
+        public function getId_denuncia()
+        {
+            return $this -> id_denuncia;
+        }
+
         public function getDescricao()
         {
             return $this -> descricao;
-        }
-
-        public function getData()
-        {
-            return $this -> data;
-        }
-
-        public function getComentario()
-        {
-            return $this -> comentario;
         }
 
         public function getLocalizacao()
@@ -41,27 +35,30 @@
             return $this -> localizacao;
         }
 
-        public function getId_usuario()
+        public function getData()
         {
-            return $this -> id_usuario;
+            return $this -> data_denuncia;
         }
 
-        // métodos SET
-        public function setDescricao($descricao)
+        public function getComentario()
         {
-            $this -> descricao = $descricao;
+            return $this -> comentario;
         }
 
-        public function setData($data)
+        public function getImagem()
         {
-            $this -> data = $data;
+            return $this -> imagem;
         }
 
-        public function setComentario($comentario)
+        public function getStatus()
         {
-            $this -> comentario = $comentario;
+            return $this -> status_denuncia;
         }
 
+        public function getUsuario_id()
+        {
+            return $this -> usuario_id;
+        }
     }
 
 ?>

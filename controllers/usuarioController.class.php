@@ -12,16 +12,8 @@
 	{
 		public function cadastro()
 		{
-			$msg = ["", "", "", ""];
+			$msg = ["", "", "", "", ""];
             $erro = false;
-
-			/*
-			function normalizar($valor) 
-			{
-				$valor = trim($valor ?? '');
-				return $valor === '' ? null : $valor;
-			}
-			*/
 
 			if($_POST)
 			{
@@ -36,6 +28,18 @@
 					$msg[1] = "Preencha o e-mail";
                     $erro = true;
 				}
+				else 
+				{
+					$usuario = new Usuario(email: $_POST["cadastro-email"]);
+					$usuarioDAO = new UsuarioDAO();
+					$retorno = $usuarioDAO -> autenticacao($usuario);
+
+					if (count($retorno) > 0)
+					{
+						$msg[1] = "E-mail já cadastrado";
+						$erro = true;
+					}
+				}
 
 				if(empty($_POST["cadastro-senha"]))
 				{
@@ -49,10 +53,13 @@
 					$erro = true;
 				}
 
-				if($_POST["confirma-senha"] !== $_POST["cadastro-senha"])
+				if($_POST["cadastro-senha"]!= "" && $_POST["confirma-senha"] != "")
 				{
-					$msg[3] = "As senhas não conferem";
-					$erro = true;
+					if($_POST["cadastro-senha"] != $_POST["confirma-senha"])
+					{
+						$msg[3] = "Senhas não conferem";
+						$erro = true;
+					}
 				}
 
 				if (!$erro)
@@ -62,7 +69,7 @@
 						$_POST["cadastro-nome"],
 						$_POST["cadastro-email"],
 						$_POST["cadastro-telefone"],
-						$_POST["cadastro-senha"],
+						password_hash($_POST["cadastro-senha"], PASSWORD_DEFAULT),
 						$_POST["cadastro-cep"],
 						$_POST["cadastro-cidade"],
 						$_POST["cadastro-estado"],
@@ -77,31 +84,43 @@
                     exit;
 				}
 			}
-
 			require_once "views/cadastro.php";
 		}
 
 		public function login()
-		{
+		{	
 			if($_POST)
 			{
+				/*
+				if(empty($_POST["login-email"]))
+				{
+					$msg[0] = "Por favor, preencha o e-mail";
+				};
+				*/
+
 				$usuario = new Usuario(email:$_POST["login-email"], senha:$_POST["login-senha"]);
-				
-				$usuarioDAO = new usuarioDAO();
-				
+				$usuarioDAO = new UsuarioDAO();
 				$retorno = $usuarioDAO->autenticacao($usuario);
+
 				if(count($retorno) > 0)
 				{
-					$_SESSION["id"] = $retorno[0]-> id_usuario;
-					$_SESSION["nome"] = $retorno[0]-> nome;
-					$_SESSION["mensagem"] = "Login efetuado com sucesso";
-					header("location:index.php");
-					die();
+					if(password_verify($_POST["login-senha"], $retorno[0] -> senha))
+					{
+						// onde a mensagem está imprimindo?
+						echo "Login efetuado com sucesso";
+						$_SESSION["id"] = $retorno[0]-> id_usuario;
+						$_SESSION["nome"] = $retorno[0]-> nome;
+						$_SESSION["tipo"] = $retorno[0]-> tipo_usuario;
+						header("location:index.php");
+						die();
+					}
 				}
 				else
 				{
+					// cadê a mensagem?
 					$_SESSION["mensagem"] = "Problema nas credenciais";
-					header("location:index.php?controle=usuarioController&metodo=login");
+					$retorno = $_SESSION["mensagem"];
+					header("location:index.php?controle=usuarioController&metodo=login&msg=$retorno");
 					die();
 				}
 

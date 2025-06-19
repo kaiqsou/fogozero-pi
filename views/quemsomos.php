@@ -1,9 +1,7 @@
 <?php
     require_once "header.php";
-    require_once "global/links.php";
 ?>  
 
-    <!--  Section -->
     <section class="quem-somos">
         <div class="container">
             <h1>Quem Somos</h1>
@@ -13,7 +11,6 @@
         </div>
     </section>
 
-    <!-- Nossa História -->
     <section class="container py-5">
         <div class="row align-items-center">
             <div class="col-lg-6">
@@ -34,7 +31,6 @@
         </div>
     </section>
 
-    <!-- Nossa Missão -->
     <section class="nossa-missao">
         <div class="container">
             <h2 class="text-center mb-5">Nossa Missão</h2>
@@ -64,7 +60,6 @@
         </div>
     </section>
 
-    <!-- Nossa Equipe -->
     <section class="equipe">
         <div class="container">
             <h2 class="text-center mt-5 mb-5">Nossa Equipe</h2>
@@ -102,43 +97,29 @@
                         <p class="funcao">Desenvolvedor de Software</p>
                         <p>Integrante do projeto Fogo Zero.</p>
                         <div class="redes-sociais">
-                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://www.linkedin.com/in/kaique-onencio"><i class="fab fa-linkedin"></i></a>
                             <a href="https://github.com/kaiqsou"><i class="fab fa-github"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.instagram.com/kaiqsou/"><i class="fab fa-instagram"></i></a>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div><br><br><br><br><br>
 
-            <br><br><br><br><br><div class="text-center mt-5">
-               <br><br> <h3 class="mb-4">Desenvolvimento de Software Multiplataforma</h3>
+            <div class="text-center mt-5">
+               
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-light py-5 text-center">
+        <div class="container">
+            <br><br> <h3 class="mb-4">Desenvolvimento de Software Multiplataforma</h3>
                 <p>2º Semestre - FATEC Jahu</p>
-                <p>Orientador: Prof. Dr. Nome do Professor</p><br><br>
-            </div>
+                <p>Orientadora: Prof. Vânia Somaio Teixeira</p><br><br><br>
+                <img src="img/fatec-logo.png" alt="Logo da Fatec" class="img-fluid d-block mx-auto">
         </div>
     </section>
 
-    <!-- Parceiros -->
-    <section class="bg-light py-5">
-        <div class="container">
-            <h2 class="text-center mb-5">Nossos Parceiros</h2>
-            <div class="row justify-content-center align-items-center g-4">
-                <div class="col-6 col-md-3 text-center">
-                    <img src="img/logofatecsite.png" alt="FATEC Jahu" class="img-fluid" style="max-height: 80px;">
-                </div>
-                <!-- Parceiros futuros podem ser adicionados aqui -->
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Fogo Zero. Todos os direitos reservados.</p>
-        </div>
-    </footer>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
 <?php

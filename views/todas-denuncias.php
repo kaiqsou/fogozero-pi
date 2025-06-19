@@ -1,43 +1,95 @@
 <?php
     require_once "header.php";
 
-    if (isset($_GET["msg"])) {
-        echo "<h3>{$_GET["msg"]}</h3>";
+    if (isset($_GET["msg"])) 
+    {
+        echo "<div id='msg_sucesso'>
+                <h2 class='msg_sucesso'>{$_GET["msg"]}</h2>
+            </div>";
     }
 ?>
 
-<main>
+<main class="denuncias-fundo">
     <div style="text-align: center; margin: 20px 0;">
-        <h2 style="color: #cc6600;">Relatos de Denúncias</h2>
+        <h2 style="color: #ff9933;">Denúncias Recentes</h2>
     </div>
 
-    <section class="comentarios-lista" id="comentarios-lista">
-        <?php 
-   
+    <section class="todas-denuncias" id="todas-denuncias">
 
-        if ($retorno) {
-            foreach ($retorno as $dado) {
-                $dataFormatada = date("d/m/Y H:i", strtotime($dado->data_denuncia));
-                echo "<div class='comentario-item'>
-                        <p><strong>ID:</strong> {$dado->id_denuncia}</p>
-                        <p><strong>Descrição:</strong> {$dado->descricao}</p>
-                        <p><strong>Local:</strong> {$dado->localizacao}</p>
-                        <p><strong>Data:</strong> {$dataFormatada}</p>
-                        <p><strong>Comentário:</strong> {$dado -> comentario}</p>
-                        <p><strong>id usuario:</strong> {$dado -> usuario_id}</p>
-                      </div>";
+        <?php 
+        if ($retorno) 
+        {
+            $contador = 0;
+            $temAtivos = false;
+
+            foreach ($retorno as $dados) 
+            {
+                if ($dados -> status_denuncia === 'Ativo') 
+                {
+                    if ($contador >= 9) break;
+
+                    $temAtivos = true;
+                    $dataFormatada = date("d/m/Y H:i", strtotime($dados -> data_denuncia));
+                    $caminhoImg = !empty($dados -> imagem) ? "denuncias/{$dados -> imagem}" : "denuncias/sem-imagem.png";
+
+                    echo "<div class='denuncia-card'>
+                        <div class='denuncia-div'>
+                            <img src='{$caminhoImg}' alt='Imagem da denúncia' class='denuncia-img'>
+                        </div>
+                        <p><span><strong>ID:</strong></span> {$dados->id_denuncia}</p>
+                        <p><span><strong>Descrição:</strong></span> {$dados->descricao}</p>
+                        <p><span><strong>Local:</strong></span> {$dados->localizacao}</p>
+                        <p><span><strong>Data:</strong></span> {$dataFormatada}</p>";
+
+                        if (!empty($dados -> comentario)) {
+                            echo "<p><span><strong>Comentário:</strong></span> {$dados -> comentario}</p>";
+                        }
+
+                    echo "<p><span><strong>Usuário:</strong></span> {$dados -> usuario_id}</p>
+                    </div>";
+
+                    $contador++;
+                }
             }
-        } else {
-            echo "<div class='comentario-item'>
-                    <p><strong>Nenhuma denúncia registrada.</strong></p>
-                  </div>";
         }
         ?>
     </section>
+    <?php
+    if (!$temAtivos)
+    {
+        echo "<div class='sem-denuncias '>
+                <p><strong>Nenhuma denúncia registrada.</strong></p>
+            </div>";
+    }
+    ?>
 </main>
 
-<?php 
-    require_once "footer.php";  
-?>
+<?php require_once "footer.php"; ?>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+    function mostrar(img)
+    {
+        if(img.files && img.files[0])
+        {
+            var reader = new FileReader();
+            reader.onload = function(e){
+                $('#img')
+                    .attr('src', e.target.result)
+                    .width(170)
+                    .height(100);
+            };
+            reader.readAsDataURL(img.files[0]);
+        }
+    }
+
+    setTimeout(function() {
+        var msg = document.getElementById("msg_sucesso");
+        if (msg)
+        {
+            msg.style.display = "none";
+        }
+    }, 2000);
+</script>
 </body>
 </html>

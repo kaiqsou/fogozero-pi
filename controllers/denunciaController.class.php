@@ -49,15 +49,32 @@
                     $erro = true;
                 }
 
+                if($_FILES["imagem"]["name"] == "")
+                {
+                    $msg[2] = "Selecione uma imagem";
+                    $erro = true;
+                }
+                else 
+                {
+                    if($_FILES["imagem"]["type"] != "image/png" && $_FILES["imagem"]["type"] != "image/jpg" && 
+					$_FILES["imagem"]["type"] != "image/jpeg")
+					{
+						$msg[2] = "Tipo de imagem inválido";
+						$erro = true;
+					}
+                }
+
                 if (!$erro) 
                 {
                     $denuncia = new Denuncia
                     ( 
-                        0,
+                        //0,
                         $_POST["descricao"], 
                         $_POST["localizacao"],
                         date('Y-m-d H:i'),
                         $_POST["comentario"],
+                        $_FILES["imagem"]["name"],
+                        "Ativo",
                         $_SESSION["id"]
                     );
                     
@@ -68,6 +85,15 @@
                 }
             }
             require_once "views/denuncia.php";
+        }
+
+        public function listarDenunciasAtivas()
+        {
+            $denuncia = new Denuncia(status_denuncia: "Ativo");
+            $denunciaDAO = new DenunciaDAO();
+
+            $denuncias = $denunciaDAO -> buscar_denuncias_ativas($denuncia);
+            return $denuncias;
         }
     }
 ?>

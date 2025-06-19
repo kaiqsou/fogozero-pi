@@ -1,6 +1,5 @@
 <?php
     require_once "header.php";
-    require_once "global/links.php";
 ?>
 
     <h1 class="introducao">

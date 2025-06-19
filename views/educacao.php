@@ -5,7 +5,6 @@
     }
 
     require_once "header.php";
-    require_once "global/links.php";
 ?>
 
     <!-- Hero Section -->
@@ -211,7 +210,7 @@
         </section>
     </main>
                                     
-    <?php require_once "footer.php"; require_once "global/scripts.php"; ?>
+    <?php require_once "footer.php";?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>

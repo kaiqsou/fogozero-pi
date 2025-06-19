@@ -9,12 +9,12 @@
 		
 		public function autenticacao($usuario)
 		{
-			$sql = "SELECT * FROM usuarios WHERE email = ? AND senha = ?";
+			$sql = "SELECT * FROM usuarios WHERE email = ?";
 			try
 			{
 				$stm = $this -> db -> prepare($sql);
 				$stm -> bindValue(1, $usuario -> getEmail());
-				$stm -> bindValue(2, $usuario -> getSenha());	
+
 				$stm -> execute();
 				$this -> db = null;
 				
@@ -24,7 +24,7 @@
 			{
 				$this -> db = null;
 				
-				return "Problema na autenticação do usuário";
+				return $e -> getMessage();
 			}
 		}
 
@@ -52,9 +52,11 @@
 			}
 			catch(PDOException $e)
 			{
+				echo $e -> getCode();
+				echo $e -> getMessage();
+
 				$this -> db = null;
-				
-				return "Problema ao cadastrar usuário.";
+				die();
 			}
 		}
 	}
