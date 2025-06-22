@@ -1,4 +1,14 @@
 <?php
+
+if(!isset($_SESSION))
+{
+	session_start();
+}
+
+require_once "global/links.php";
+
+if (isset($_SESSION["id"]))
+{
     require_once "header.php";
 
     if (!isset($_SESSION)) 
@@ -22,8 +32,6 @@
             $comentario = $_POST['comentario'];
         }
     }
-
-    if (isset($_SESSION["nome"])):
 ?>
 
 <main>
@@ -62,12 +70,13 @@
 </main>
 
 <?php
-else:
-    echo "<section style='min-height: 60vh; display: flex; flex-direction: column; align-items: center; justify-content: center;'>";
+    require_once "footer.php";
+}
+else 
+{
+    echo "<div class='permissoes-negadas'>";
     echo "<h1>Permissões negadas.</h1><br><br>";    
     echo "<a class='btn btn-warning text-white fw-bold px-4 py-2' href='../index.php?controle=inicioController&metodo=inicio'>Voltar</a>";
-    echo "</section>";
-endif;
-
-require_once "footer.php";
+    echo "</div>";
+}
 ?>

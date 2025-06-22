@@ -37,7 +37,9 @@ class DenunciaDAO extends Conexao
 		{
 			$stm = $this -> db -> prepare($sql);
 			$stm -> execute();
+            
 			$this -> db = null;
+
 			return $stm -> fetchAll(PDO::FETCH_OBJ);
 		}
 		catch(PDOException $e) 
@@ -54,16 +56,16 @@ class DenunciaDAO extends Conexao
         try 
         {
             $stm = $this -> db -> prepare($sql);
-				$stm -> bindValue(1, $denuncia -> getStatus());
-				$stm -> execute();
+			$stm -> bindValue(1, $denuncia -> getStatus());
+			$stm -> execute();
 
-				$this->db = null;
+			$this->db = null;
 
-				return $stm->fetchAll(PDO::FETCH_OBJ);
+			return $stm->fetchAll(PDO::FETCH_OBJ);
         }
         catch(PDOException $e)
         {
-            $this->db = null;
+            $this -> db = null;
 			return "Problema ao buscar todos os produtos";
         }
     }
@@ -77,6 +79,10 @@ class DenunciaDAO extends Conexao
             $stm = $this -> db -> prepare($sql);
             $stm -> bindValue(1, $denuncia -> getStatus());
             $stm -> bindValue(2, $denuncia -> getId_denuncia());
+
+            $stm -> execute();
+
+            $this -> db = null;
         }
         catch(PDOException $e)
         {

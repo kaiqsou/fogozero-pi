@@ -21,7 +21,7 @@
                 </div>
 
                 <div>
-                    <p class="text-center mb-4">Não tem conta? Faça o cadastro <a href="index.php?controle=inicioController&metodo=cadastro">aqui</a>!</p>
+                    <p class="text-center mb-4">Não tem conta? Faça o cadastro <a style="color: #ff9933; font-weight:bold;" href="index.php?controle=inicioController&metodo=cadastro">aqui</a>!</p>
                 </div>
 
                 <button type="submit" class="btn btn-primary w-100">Entrar</button>

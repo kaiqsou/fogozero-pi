@@ -77,6 +77,9 @@
                 </div>
             </div>
             </div>
+            <div>
+                <br><p class="text-center mb-4">Já posui uma conta? Entre <a style="color: #ff9933; font-weight:bold;" href="index.php?controle=inicioController&metodo=login">aqui</a>!</p>
+            </div>
                 <button type="submit" class="btn btn-primary w-100" style="display:inline">Enviar</button>
             </form>
         </div>

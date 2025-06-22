@@ -2,10 +2,9 @@
     
     class Denuncia
     {
-        private int $id_denuncia;
-
         public function __construct
         (
+            private int $id_denuncia = 0,
             private string $descricao = "",
             private string $localizacao = "",
             // private string $latitude = "",

@@ -21,6 +21,14 @@
 			require_once "views/todas-denuncias.php";
 		}
 
+        public function gerenciar()
+        {
+            $denunciaDAO = new DenunciaDAO();
+            $retorno = $denunciaDAO-> buscar_denuncias();
+
+            require_once "views/gerenciar-denuncias.php";
+        }
+
         public function listar()
         {
             $denunciaDAO = new DenunciaDAO();
@@ -68,7 +76,7 @@
                 {
                     $denuncia = new Denuncia
                     ( 
-                        //0,
+                        0,
                         $_POST["descricao"], 
                         $_POST["localizacao"],
                         date('Y-m-d H:i'),
@@ -94,6 +102,20 @@
 
             $denuncias = $denunciaDAO -> buscar_denuncias_ativas($denuncia);
             return $denuncias;
+        }
+
+        public function alterar_status()
+        {
+            if (isset($_GET["id"]) && isset($_GET["status"]))
+            {
+                $id = $_GET["id"];
+                $status = $_GET["status"];
+
+                $denuncia = new Denuncia(id_denuncia: $id, status_denuncia: $status);
+                $denunciaDAO = new DenunciaDAO();
+                $denunciaDAO -> mudar_status($denuncia);
+            }
+            header("location:index.php?controle=denunciaController&metodo=gerenciar");
         }
     }
 ?>

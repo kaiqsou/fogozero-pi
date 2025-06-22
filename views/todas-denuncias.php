@@ -9,18 +9,19 @@
     }
 ?>
 
-<main class="denuncias-fundo">
+<main class="denuncias-fundo" style="padding-bottom: 200px;">
     <div style="text-align: center; margin: 20px 0;">
         <h2 style="color: #ff9933;">Denúncias Recentes</h2>
     </div>
 
-    <section class="todas-denuncias" id="todas-denuncias">
+    <section class="todas-denuncias" id="denuncias-ativas">
 
         <?php 
+        $temAtivos = false;
+
         if ($retorno) 
         {
             $contador = 0;
-            $temAtivos = false;
 
             foreach ($retorno as $dados) 
             {
@@ -39,14 +40,20 @@
                         <p><span><strong>ID:</strong></span> {$dados->id_denuncia}</p>
                         <p><span><strong>Descrição:</strong></span> {$dados->descricao}</p>
                         <p><span><strong>Local:</strong></span> {$dados->localizacao}</p>
-                        <p><span><strong>Data:</strong></span> {$dataFormatada}</p>";
+                        <p><span><strong>Data:</strong></span> {$dataFormatada}</p>
+                        <p><span><strong>Status:</strong></span> {$dados -> status_denuncia}</p>";
 
-                        if (!empty($dados -> comentario)) {
+                        if (!empty($dados -> comentario)) 
+                        {
                             echo "<p><span><strong>Comentário:</strong></span> {$dados -> comentario}</p>";
                         }
-
-                    echo "<p><span><strong>Usuário:</strong></span> {$dados -> usuario_id}</p>
-                    </div>";
+                        
+                        if (isset($_SESSION["tipo"]) && $_SESSION["tipo"] === "Administrador")
+                        {
+                            echo "<br><a class='botao-status' href='index.php?controle=denunciaController&metodo=mudarStatus&{$dados->id_denuncia}'>Mudar Status</a>";
+                        }
+                        
+                        echo "</div>";
 
                     $contador++;
                 }
@@ -54,6 +61,7 @@
         }
         ?>
     </section>
+    
     <?php
     if (!$temAtivos)
     {

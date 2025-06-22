@@ -7,6 +7,7 @@
 		require_once "controllers/{$controle}.class.php";
 		$obj = new $controle();
 		$obj->$metodo();
+		
 	}
 	else
 	{

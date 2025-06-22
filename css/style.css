@@ -57,46 +57,65 @@ img {
 }
 
 /* MENU */
-.menu-bg {
-  background: #ff9933;
+.menu-bg 
+{
+  background: linear-gradient(to bottom, #ff9933, #ffb366);
+  padding: 20px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-.menu {
-  max-width: 960px;
+.menu 
+{
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 15px 0;
+  padding: 0 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
 }
-.menu a {
+
+.menu a 
+{
   color: white;
 }
 .menu-logo a {
-  font-size: 2.25em;
+  font-size: 28px;
   font-weight: bold;
-  margin: 0 10px;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 1px;
 }
-.menu-nav ul {
+.menu-nav ul 
+{
+  list-style: none;
   display: flex;
-  flex-wrap: wrap;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
 }
-.menu-nav li {
+
+.menu-nav li 
+{
   margin-right: 20px;
 }
-.menu-nav a {
-  font-size: 1.25em;
-  padding: 10px;
-  display: block;
+
+.menu-nav a 
+{
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  font-size: 16px;
 }
-.menu-nav a:hover {
-  color: #cc6600;
-  background-color: whitesmoke;
-  border-radius: 10px;
+
+.menu-nav a:hover
+{
+  color: #ffe6cc;
+  text-decoration: underline;
 }
 
 /* INTRODUÇÃO */
-.introducao {
+.introducao 
+{
   font-size: 3em;
   line-height: 1;
   text-align: center;
@@ -105,19 +124,45 @@ img {
   margin: 0 auto;
 }
 
-/* CONTATO QUEIMADAS */
-.contato-queimadas {
-  background: linear-gradient(to bottom, #ff9933, rgba(240, 169, 62, 0.95)), url('../img/contato-queimadas.jpg') center/cover no-repeat fixed;
-  padding: 10px;
+.nav-bar 
+{
+  background: linear-gradient(to bottom, #ff9933, #ffb366);
+  padding: 10px 0;
   text-align: center;
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.5px;
 }
-.contato-queimadas h2 {
+
+/* CONTATO QUEIMADAS */
+
+.contato-queimadas 
+{
+  padding: 10px 0;
+  margin-bottom: 20px;
+  text-align: center;
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+
+.contato-queimadas h2 
+{
   color: #333;
   margin-bottom: 10px;
 }
-.contato-queimadas p {
+
+.contato-queimadas p 
+{
+  margin: 5px 0;
   color: white;
-  font-size: 1.2em;
+}
+
+.contato-queimadas strong 
+{
+  color: white;
 }
 
 /* SEÇÃO SOBRE */
@@ -192,7 +237,8 @@ img {
   padding: 100px 0;
   text-align: center;
   margin-bottom: 40px;
-  border-bottom: 4px solid #ff6600;
+  border-top: 1px solid #ffe8e8;
+  border-bottom: 1px solid #ffe8e8;
 }
 
 .hero-educacao h1 {
@@ -328,29 +374,115 @@ button[type="submit"]:hover {
 
 
 /* FOOTER */
-.footer {
-  text-align: center;
-  padding: 10px 0;
-  background-color: #ff9933;
+.footer 
+{
+  background: linear-gradient(to bottom, #ff9933, #e67300);
   color: white;
+  padding: 40px 20px 20px;
+  font-family: "Nunito", Arial, sans-serif; 
+}
+
+.footer h5 
+{
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.footer p 
+{
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #fcefe0;
+}
+
+.footer ul 
+{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer ul li a 
+{
+  color: #ffe6cc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer ul li a:hover 
+{
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.footer .social-links a 
+{
+  font-size: 1.3rem;
+  color: #fff;
+  margin-right: 12px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer .social-links a:hover 
+{
+  color: #ffd1a3;
+  transform: scale(1.2);
+}
+
+.footer hr 
+{
+  border-color: rgba(255, 255, 255, 0.2);
+  margin: 30px 0;
+}
+
+.footer .text-center 
+{
+  color: #fff8f0;
+  font-size: 0.95rem;
 }
 
 /* RESPONSIVIDADE */
-@media (max-width: 768px) {
-  .menu {
+@media (max-width: 768px) 
+{
+  .menu 
+  {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 0;
   }
-  .menu-nav ul {
+
+  .menu-nav ul 
+  {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
   }
-  .introducao {
+
+  .menu-nav li 
+  {
+    margin-right: 0;
+  }
+
+  .introducao 
+  {
     font-size: 2em;
     padding: 30px 10px;
   }
-  .menu-logo a {
-    font-size: 1.5em;
+
+  .menu-logo a 
+  {
+    font-size: 1.8em;
+  }
+
+  .menu-nav a 
+  {
+    font-size: 18px;
+    padding: 6px 12px;
   }
 }
 
@@ -556,15 +688,15 @@ input[type="checkbox"] {
 }
 /* QUEM SOMOS */
 .quem-somos {
-  background: 
-    linear-gradient(to bottom, #ff9933, rgba(255, 155, 6, 0.95)),url('../img/80_Y29udmVyc2F0aW9uX2J1c2luZXNzLTA2.jpg') center/cover no-repeat fixed;
+  background: linear-gradient(to bottom, #ff9933, #ffb366);
   color: white;
   padding: 120px 0;
   text-align: center;
   position: relative;
-   margin-bottom: 40px;
-    border-bottom: 4px solid #ff6600;
+  margin-bottom: 40px;
   z-index: 1;
+  border-top: 1px solid #ffe8e8;
+  border-bottom: 1px solid #ffe8e8;
 }
 
 .quem-somos::before {
@@ -795,6 +927,13 @@ input[type="checkbox"] {
   padding: 20px;
 }
 
+@media (max-width: 768px) 
+{
+  .todas-denuncias {
+    grid-template-columns: 1fr;
+  }
+}
+
 .sem-denuncias
 {
   background-color: #fff5e6;
@@ -839,7 +978,58 @@ input[type="checkbox"] {
   background-color:#fff5e6;
 }
 
-.permissoes_negadas button
+.botao-header
 {
-  
+background-color: #c06811      ;
+  color: #fff;
+  font-weight: 600;
+  padding: 6px 16px;
+  border: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  margin-left: 10px;
 }
+
+.botao-header:hover
+{
+background-color: #e67300;
+  color: #fff;
+}
+
+.menu-nav a, 
+.menu a:hover,
+.menu-nav a:focus,
+.menu-nav a:active 
+{
+  text-decoration: none;
+}
+
+.permissoes-negadas
+{
+  min-height: 60vh; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center;
+}
+
+.botao-status 
+{
+  background-color: #ff9933;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.botao-status:hover 
+{
+  background-color: #e67e22;
+  cursor: pointer;
+  text-decoration: none;
+}
+
