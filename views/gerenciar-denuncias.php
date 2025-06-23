@@ -43,14 +43,13 @@ if (isset($_SESSION["tipo"]) && $_SESSION["tipo"] === "Administrador")
                         </div>
                         <p><span><strong>ID:</strong></span> {$dados -> id_denuncia}</p>
                         <p><span><strong>Descrição:</strong></span> {$dados -> descricao}</p>
-                        <p><span><strong>Local:</strong></span> {$dados -> localizacao}</p>
-                        <p><span><strong>Data:</strong></span> {$dataFormatada}</p>
-                        <p style='color:LimeGreen;'><span><strong>Status:</strong></span> <strong>{$dados -> status_denuncia}</strong></p>";
-
+                        <p><span><strong>Local:</strong></span> {$dados -> localizacao}</p>";
                         if (!empty($dados -> comentario)) 
                         {
                             echo "<p><span><strong>Comentário:</strong></span> {$dados -> comentario}</p>";
                         }
+                        echo "<p><span><strong>Data:</strong></span> {$dataFormatada}</p>
+                        <p style='color:LimeGreen;'><span><strong>Status:</strong></span> <strong>{$dados -> status_denuncia}</strong></p>";
                         
                         echo "<br><a class='botao-status' href='index.php?controle=denunciaController&metodo=alterar_status&id={$dados->id_denuncia}&status=Inativo'>Mudar Status</a>
                         </div>";
@@ -68,14 +67,13 @@ if (isset($_SESSION["tipo"]) && $_SESSION["tipo"] === "Administrador")
                         </div>
                         <p><span><strong>ID:</strong></span> {$dados -> id_denuncia}</p>
                         <p><span><strong>Descrição:</strong></span> {$dados -> descricao}</p>
-                        <p><span><strong>Local:</strong></span> {$dados -> localizacao}</p>
-                        <p><span><strong>Data:</strong></span> {$dataFormatada}</p>
-                        <p style='color:crimson;'><span><strong>Status:</strong></span> <strong>{$dados -> status_denuncia}</strong></p>";
-
+                        <p><span><strong>Local:</strong></span> {$dados -> localizacao}</p>";
                         if (!empty($dados -> comentario)) 
                         {
                             echo "<p><span><strong>Comentário:</strong></span> {$dados -> comentario}</p>";
                         }
+                        echo "<p><span><strong>Data:</strong></span> {$dataFormatada}</p>
+                        <p style='color:crimson;'><span><strong>Status:</strong></span> <strong>{$dados -> status_denuncia}</strong></p>";
                         
                         echo "<br><a class='botao-status' href='index.php?controle=denunciaController&metodo=alterar_status&id={$dados->id_denuncia}&status=Ativo'>Mudar Status</a>
 

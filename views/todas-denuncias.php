@@ -35,21 +35,13 @@
                         </div>
                         <p><span><strong>ID:</strong></span> {$dados->id_denuncia}</p>
                         <p><span><strong>Descrição:</strong></span> {$dados->descricao}</p>
-                        <p><span><strong>Local:</strong></span> {$dados->localizacao}</p>
-                        <p><span><strong>Data:</strong></span> {$dataFormatada}</p>
-                        <p><span><strong>Status:</strong></span> {$dados -> status_denuncia}</p>";
-
+                        <p><span><strong>Local:</strong></span> {$dados->localizacao}</p>";
                         if (!empty($dados -> comentario)) 
                         {
                             echo "<p><span><strong>Comentário:</strong></span> {$dados -> comentario}</p>";
                         }
-                        
-                        if (isset($_SESSION["tipo"]) && $_SESSION["tipo"] === "Administrador")
-                        {
-                            echo "<br><a class='botao-status' href='index.php?controle=denunciaController&metodo=mudarStatus&{$dados->id_denuncia}'>Mudar Status</a>";
-                        }
-                        
-                        echo "</div>";
+                        echo "<p><span><strong>Data:</strong></span> {$dataFormatada}</p>
+                        <p><span><strong>Status:</strong></span> {$dados -> status_denuncia}</p></div>";
 
                     $contador++;
                 }

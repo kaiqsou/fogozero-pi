@@ -1,16 +1,11 @@
 1. * descobrir a forma de possibilitar o recebimento de alertas por e-mail
-2. * arrumar cards que mostram informações das denúncias, talvez mais detalhes?
-3. filtro das denúncias dos últimos 5 dias na página de exibição das denúncias
-4. usar RSS para exibir 'últimas notícias' de incêndios
-5. integrar com redes sociais
-6. separar o CSS
-7. arrumar página de "acesso negado" ao tentar acessar a página de denunciar
-8. fazer um header mais atrativo 
-9. tornar possível o "feedback" no site
-10. página admin
-11. página de perfil para atualizar endereço
-12. fazer a checkbox se manter marcada caso haja POST
-13. campos de endereço se tornarem obrigatórios caso a checkbox esteja marcada, ou pelo menos aparecer mensagem de erro caso 
+2. usar RSS para exibir 'últimas notícias' de incêndios
+3. integrar com redes sociais
+4. separar o CSS
+5. tornar possível o "feedback" no site
+6. página de perfil para atualizar endereço
+7. fazer a checkbox se manter marcada caso haja POST
+8. campos de endereço se tornarem obrigatórios caso a checkbox esteja marcada, ou pelo menos aparecer mensagem de erro caso 
 todos os campos não sejam preenchidos
 
 * = prioridade

@@ -107,6 +107,12 @@
 						header("location:index.php");
 						die();
 					}
+					else 
+					{
+						$_SESSION["mensagem"] = "Houve algum problema nas credenciais. Por favor, tente novamente.";
+						header("location:index.php?controle=usuarioController&metodo=login");
+						die();
+					}
 				}
 				else
 				{
