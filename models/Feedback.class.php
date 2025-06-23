@@ -2,10 +2,10 @@
 
 class Feedback
 {
-    private int $id_feedback;
 
     public function __construct
     (
+        private int $id_feedback = 0,
         private string $data_feedback = "",
         private string $comentario = "",
         private string $imagem = "",

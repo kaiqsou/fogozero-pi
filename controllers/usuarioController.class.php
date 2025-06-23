@@ -66,6 +66,7 @@
 				{
 					$usuario = new Usuario
 					(
+						0,
 						$_POST["cadastro-nome"],
 						$_POST["cadastro-email"],
 						$_POST["cadastro-telefone"],

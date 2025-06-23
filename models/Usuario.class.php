@@ -2,10 +2,10 @@
 
 class Usuario
 {
-    private int $id_usuario;
     
     public function __construct
     (
+        private int $id_usuario = 0,
         private string $nome = "",
         private string $email = "",
         private string $telefone = "",

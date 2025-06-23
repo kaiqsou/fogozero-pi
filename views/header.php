@@ -49,6 +49,7 @@
                         if(isset($_SESSION["id"]))
                         {
                             $nome = $_SESSION["nome"];
+                            $primeiroNome = explode(" ", trim($nome))[0];
 
                             if (isset($_SESSION["tipo"]) && $_SESSION["tipo"] === "Administrador")
                             {
@@ -64,7 +65,7 @@
                             </li>
 
                             <li>
-                                <p>Olá, <strong>{$nome}</strong>!</p>
+                                <p>Olá, <strong>{$primeiroNome}</strong>!</p>
                             </li>
 
                             <li>

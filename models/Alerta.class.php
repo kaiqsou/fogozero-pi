@@ -2,10 +2,10 @@
 
     class Alerta
     {
-        private int $id_alerta;
 
         public function __construct
         (
+            private int $id_alerta = 0,
             private string $data = ""
             // private $denuncia = null
         ){}

@@ -41,7 +41,8 @@ if (isset($_SESSION["tipo"]) && $_SESSION["tipo"] === "Administrador")
                         <div class='denuncia-div'>
                             <img src='{$caminhoImg}' alt='Imagem da denúncia' class='denuncia-img'>
                         </div>
-                        <p><span><strong>ID:</strong></span> {$dados -> id_denuncia}</p>
+                        <p><span><strong>ID da denúncia:</strong></span> {$dados -> id_denuncia}</p>
+                        <p><span><strong>ID do usuário:</strong></span> {$dados -> usuario_id}</p>
                         <p><span><strong>Descrição:</strong></span> {$dados -> descricao}</p>
                         <p><span><strong>Local:</strong></span> {$dados -> localizacao}</p>";
                         if (!empty($dados -> comentario)) 
@@ -65,13 +66,16 @@ if (isset($_SESSION["tipo"]) && $_SESSION["tipo"] === "Administrador")
                         <div class='denuncia-div'>
                             <img src='{$caminhoImg}' alt='Imagem da denúncia' class='denuncia-img'>
                         </div>
-                        <p><span><strong>ID:</strong></span> {$dados -> id_denuncia}</p>
+                        <p><span><strong>ID da denúncia:</strong></span> {$dados -> id_denuncia}</p>
+                        <p><span><strong>ID do usuário:</strong></span> {$dados -> usuario_id}</p>
                         <p><span><strong>Descrição:</strong></span> {$dados -> descricao}</p>
                         <p><span><strong>Local:</strong></span> {$dados -> localizacao}</p>";
+                        
                         if (!empty($dados -> comentario)) 
                         {
                             echo "<p><span><strong>Comentário:</strong></span> {$dados -> comentario}</p>";
                         }
+
                         echo "<p><span><strong>Data:</strong></span> {$dataFormatada}</p>
                         <p style='color:crimson;'><span><strong>Status:</strong></span> <strong>{$dados -> status_denuncia}</strong></p>";
                         

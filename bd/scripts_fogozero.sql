@@ -20,8 +20,6 @@ CREATE TABLE IF NOT EXISTS usuarios
     tipo_usuario ENUM('Administrador', 'Comum') NOT NULL DEFAULT 'Comum'
 );
 
-INSERT INTO usuarios(nome, email, senha, tipo_usuario) VALUES("kaique", "kaiqsouza2004@hotmail.com", "123456", "Administrador"); 
-
 /*
 SELECT * FROM usuarios;
 */

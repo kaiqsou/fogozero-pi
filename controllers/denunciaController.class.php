@@ -2,6 +2,12 @@
     require_once "models/Conexao.class.php";
     require_once "models/DenunciaDAO.class.php";
     require_once "models/Denuncia.class.php";
+    require_once "models/Usuario.class.php";
+
+    if(!isset($_SESSION))
+	{
+		session_start();
+	}
 
     class denunciaController
     {
@@ -46,7 +52,6 @@
 
         public function inserir()
         {
-            session_start();
             $msg = ["", ""];
             $erro = false;
 
@@ -81,6 +86,7 @@
 
                 if (!$erro) 
                 {
+                    $usuario = new Usuario($_SESSION["id"]);
                     $denuncia = new Denuncia
                     ( 
                         0,
@@ -90,11 +96,13 @@
                         $_POST["comentario"],
                         $_FILES["imagem"]["name"],
                         "Ativo",
-                        $_SESSION["id"]
+                        $usuario
                     );
                     
                     $denunciaDAO = new DenunciaDAO();
                     $retorno = $denunciaDAO -> inserir($denuncia);
+                    $destino = 'denuncias/' . basename($_FILES['imagem']['name']);
+					move_uploaded_file($_FILES['imagem']['tmp_name'], $destino);
 
                     if ($_SESSION["tipo"] === "Comum")
                     {

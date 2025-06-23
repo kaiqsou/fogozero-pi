@@ -33,7 +33,6 @@
                         <div class='denuncia-div'>
                             <img src='{$caminhoImg}' alt='Imagem da denúncia' class='denuncia-img'>
                         </div>
-                        <p><span><strong>ID:</strong></span> {$dados->id_denuncia}</p>
                         <p><span><strong>Descrição:</strong></span> {$dados->descricao}</p>
                         <p><span><strong>Local:</strong></span> {$dados->localizacao}</p>";
                         if (!empty($dados -> comentario)) 

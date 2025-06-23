@@ -23,7 +23,7 @@ class DenunciaDAO extends Conexao
         $stm -> bindValue(4, $denuncia -> getComentario());
         $stm -> bindValue(5, $denuncia -> getImagem());
         $stm -> bindValue(6, $denuncia -> getStatus());
-        $stm -> bindValue(7, $denuncia -> getUsuario_id());
+        $stm -> bindValue(7, $denuncia -> getUsuario() -> getId_usuario());
         $stm -> execute();
         $this -> db = null;
 

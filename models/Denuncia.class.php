@@ -13,7 +13,7 @@
             private string $comentario = "",
             private string $imagem = "",
             private string $status_denuncia = "",
-            private int $usuario_id = 1
+            private $usuario = null
             // private $alerta = null,
             // private $feedback = null
         ){}
@@ -54,9 +54,9 @@
             return $this -> status_denuncia;
         }
 
-        public function getUsuario_id()
+        public function getUsuario()
         {
-            return $this -> usuario_id;
+            return $this -> usuario;
         }
     }
 
