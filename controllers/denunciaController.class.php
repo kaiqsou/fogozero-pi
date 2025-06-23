@@ -95,7 +95,16 @@
                     
                     $denunciaDAO = new DenunciaDAO();
                     $retorno = $denunciaDAO -> inserir($denuncia);
-                    header("location:index.php?controle=denunciaController&metodo=listarDenunciasAtivas&msg=$retorno");
+
+                    if ($_SESSION["tipo"] === "Comum")
+                    {
+                        header("location:index.php?controle=denunciaController&metodo=listarDenunciasAtivas&msg=$retorno");
+                    }
+                    else 
+                    {
+                        header("location:index.php?controle=denunciaController&metodo=listarTodas&msg=$retorno");
+                    }
+
                     exit;
                 }
             }

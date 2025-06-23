@@ -44,18 +44,18 @@ if (isset($_SESSION["id"]))
                         <div class='row'>
                             <div class='col'>
                                 <label for='descricao'>Descrição:</label>
-                                <input type='text' class='form-control' id='descricao' name='descricao' placeholder='Digite uma descrição' value='<?php echo $descricao; ?>'>
+                                <input maxlength="100" type='text' class='form-control' id='descricao' name='descricao' placeholder='Digite uma descrição' value='<?php echo $descricao; ?>'>
                                 <div style='color:red;font-size:16px;'><?php echo $msg[0] != '' ? $msg[0] : ''; ?></div>
                             </div>
                             <div class='col'>
                                 <label for='local'>Local:</label>
-                                <input type='text' class='form-control' id='localizacao' name='localizacao' placeholder='Digite a localização' value='<?php echo $localizacao; ?>'>
+                                <input maxlength="255" type='text' class='form-control' id='localizacao' name='localizacao' placeholder='Digite a localização' value='<?php echo $localizacao; ?>'>
                                 <div style='color:red;font-size:16px;'><?php echo $msg[1] != '' ? $msg[1] : ''; ?></div>
                             </div>
                         </div><br>
 
                         <label for='comentario'>Comentário:</label>
-                        <textarea class='form-control' id='comentario' name='comentario' rows='7'><?php echo $comentario; ?></textarea><br>
+                        <textarea maxlength="255" class='form-control' id='comentario' name='comentario' rows='7'><?php echo $comentario; ?></textarea><br>
 
                         <label for='imagem'>Anexar Imagem:</label>
                         <input type='file' class='form-control-file' id='imagem' name='imagem' onchange='mostrar(this)' accept='image/png, image/jpeg'>

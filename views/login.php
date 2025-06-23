@@ -11,12 +11,12 @@
 
                 <div class="form-group mb-4">
                     <label for="login-email">Endereço de email</label>
-                    <input type="email" class="form-control" name="login-email" placeholder="Digite seu email" required>
+                    <input maxlength="255" type="email" class="form-control" name="login-email" placeholder="Digite seu email" required>
                 </div>
 
                 <div class="form-group mb-4">
                     <label for="login-senha">Senha</label>
-                    <input type="password" class="form-control" name="login-senha" placeholder="Digite sua senha" required>
+                    <input maxlength="15" type="password" class="form-control" name="login-senha" placeholder="Digite sua senha" required>
                 </div>
 
                 <div style='color:red;font-size:13px;'><?php echo $msg;?></div><br>

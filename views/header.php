@@ -48,6 +48,8 @@
                         
                         if(isset($_SESSION["id"]))
                         {
+                            $nome = $_SESSION["nome"];
+
                             if (isset($_SESSION["tipo"]) && $_SESSION["tipo"] === "Administrador")
                             {
                             echo "
@@ -60,6 +62,11 @@
                             <li>
                                 <a class='botao-header' href='index.php?controle=denunciaController&metodo=inicio'>Denuncie</a>
                             </li>
+
+                            <li>
+                                <p>Olá, <strong>{$nome}</strong>!</p>
+                            </li>
+
                             <li>
                                 <a class='botao-header' href='index.php?controle=usuarioController&metodo=logout'>Sair</a>
                             </li>";
