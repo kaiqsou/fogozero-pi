@@ -91,12 +91,6 @@
 		{	
 			if($_POST)
 			{
-				/*
-				if(empty($_POST["login-email"]))
-				{
-					$msg[0] = "Por favor, preencha o e-mail";
-				};
-				*/
 
 				$usuario = new Usuario(email:$_POST["login-email"], senha:$_POST["login-senha"]);
 				$usuarioDAO = new UsuarioDAO();
@@ -106,7 +100,6 @@
 				{
 					if(password_verify($_POST["login-senha"], $retorno[0] -> senha))
 					{
-						// onde a mensagem está imprimindo?
 						echo "Login efetuado com sucesso";
 						$_SESSION["id"] = $retorno[0]-> id_usuario;
 						$_SESSION["nome"] = $retorno[0]-> nome;
@@ -117,10 +110,8 @@
 				}
 				else
 				{
-					// cadê a mensagem?
-					$_SESSION["mensagem"] = "Problema nas credenciais";
-					$retorno = $_SESSION["mensagem"];
-					header("location:index.php?controle=usuarioController&metodo=login&msg=$retorno");
+					$_SESSION["mensagem"] = "Houve algum problema nas credenciais. Por favor, tente novamente.";
+					header("location:index.php?controle=usuarioController&metodo=login");
 					die();
 				}
 

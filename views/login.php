@@ -1,6 +1,7 @@
 <?php
     require_once "header.php";
-    $msg = ["", ""]
+    $msg = isset($_SESSION["mensagem"]) ? $_SESSION["mensagem"] : "";
+    unset($_SESSION["mensagem"]);
 ?>
 
     <section class="login-bg">
@@ -11,14 +12,14 @@
                 <div class="form-group mb-4">
                     <label for="login-email">Endereço de email</label>
                     <input type="email" class="form-control" name="login-email" placeholder="Digite seu email" required>
-                    <div style='color:red;font-size:12px;'><?php echo $msg[0];?></div>
                 </div>
 
                 <div class="form-group mb-4">
                     <label for="login-senha">Senha</label>
                     <input type="password" class="form-control" name="login-senha" placeholder="Digite sua senha" required>
-                    <div style='color:red;font-size:12px;'><?php echo $msg[1];?></div>
                 </div>
+
+                <div style='color:red;font-size:13px;'><?php echo $msg;?></div><br>
 
                 <div>
                     <p class="text-center mb-4">Não tem conta? Faça o cadastro <a style="color: #ff9933; font-weight:bold;" href="index.php?controle=inicioController&metodo=cadastro">aqui</a>!</p>
