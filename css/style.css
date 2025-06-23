@@ -641,12 +641,9 @@ button[type="submit"]:hover {
 }
 
 /* Feedback visual para validação */
+.form-control:valid,
 .form-control:invalid {
-  border-color: #dc3545;
-}
-
-.form-control:valid {
-  border-color: #28a745;
+  border-color: #ccc !important;
 }
 
 .btn-primary {
@@ -970,7 +967,6 @@ input[type="checkbox"] {
 
 .msg_sucesso
 {
-  text-shadow: -1px -1px 0 #459017, 2px -1px 0 #459017, -1px  1px 0 #459017, 2px  1px 0 #459017;
   font-weight: bold;
   padding-top: 10px;  
   text-align: center; 

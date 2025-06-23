@@ -89,7 +89,7 @@ if (isset($_SESSION["tipo"]) && $_SESSION["tipo"] === "Administrador")
     </section>
     
 <?php
-    if (!$temAtivos)
+    if (!$retorno)
     {
         echo "<div class='sem-denuncias'>
                 <p><strong>Nenhuma denúncia registrada.</strong></p>

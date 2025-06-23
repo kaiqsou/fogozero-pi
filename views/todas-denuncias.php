@@ -17,7 +17,6 @@
     <section class="todas-denuncias" id="denuncias-ativas">
 
         <?php 
-        $temAtivos = false;
 
         if ($retorno) 
         {
@@ -25,11 +24,8 @@
 
             foreach ($retorno as $dados) 
             {
-                if ($dados -> status_denuncia === 'Ativo') 
-                {
                     if ($contador >= 9) break;
 
-                    $temAtivos = true;
                     $dataFormatada = date("d/m/Y H:i", strtotime($dados -> data_denuncia));
                     $caminhoImg = !empty($dados -> imagem) ? "denuncias/{$dados -> imagem}" : "denuncias/sem-imagem.png";
 
@@ -58,18 +54,18 @@
                     $contador++;
                 }
             }
-        }
         ?>
     </section>
-    
-    <?php
-    if (!$temAtivos)
-    {
-        echo "<div class='sem-denuncias '>
-                <p><strong>Nenhuma denúncia registrada.</strong></p>
-            </div>";
-    }
+
+    <?php 
+        if (!$retorno)
+        {
+            echo "<div class='sem-denuncias'>
+                    <p><strong>Nenhuma denúncia registrada.</strong></p>
+                </div>";
+        }
     ?>
+
 </main>
 
 <?php require_once "footer.php"; ?>

@@ -13,28 +13,35 @@
             require_once "views/denuncia.php";
         }
 
-        public function denuncias()
-		{
-            $denunciaDAO = new DenunciaDAO();
-            $retorno = $denunciaDAO-> buscar_denuncias();
-
-			require_once "views/todas-denuncias.php";
-		}
-
-        public function gerenciar()
-        {
-            $denunciaDAO = new DenunciaDAO();
-            $retorno = $denunciaDAO-> buscar_denuncias();
-
-            require_once "views/gerenciar-denuncias.php";
-        }
-
-        public function listar()
+        public function listarTodas()
         {
             $denunciaDAO = new DenunciaDAO();
             $retorno = $denunciaDAO -> buscar_denuncias();
 
-            require_once "views/todas-denuncias.php";   
+            require_once "views/gerenciar-denuncias.php";   
+        }
+
+        public function listarDenunciasAtivas()
+        {
+            $denuncia = new Denuncia(status_denuncia: "Ativo");
+            $denunciaDAO = new DenunciaDAO();
+            $retorno = $denunciaDAO -> buscar_denuncias_ativas($denuncia);
+
+            require_once "views/todas-denuncias.php";
+        }
+
+        public function alterar_status()
+        {
+            if (isset($_GET["id"]) && isset($_GET["status"]))
+            {
+                $id = $_GET["id"];
+                $status = $_GET["status"];
+
+                $denuncia = new Denuncia(id_denuncia: $id, status_denuncia: $status);
+                $denunciaDAO = new DenunciaDAO();
+                $denunciaDAO -> mudar_status($denuncia);
+            }
+            header("location:index.php?controle=denunciaController&metodo=listarTodas");
         }
 
         public function inserir()
@@ -88,34 +95,11 @@
                     
                     $denunciaDAO = new DenunciaDAO();
                     $retorno = $denunciaDAO -> inserir($denuncia);
-                    header("location:index.php?controle=denunciaController&metodo=listar&msg=$retorno");
+                    header("location:index.php?controle=denunciaController&metodo=listarDenunciasAtivas&msg=$retorno");
                     exit;
                 }
             }
             require_once "views/denuncia.php";
-        }
-
-        public function listarDenunciasAtivas()
-        {
-            $denuncia = new Denuncia(status_denuncia: "Ativo");
-            $denunciaDAO = new DenunciaDAO();
-
-            $denuncias = $denunciaDAO -> buscar_denuncias_ativas($denuncia);
-            return $denuncias;
-        }
-
-        public function alterar_status()
-        {
-            if (isset($_GET["id"]) && isset($_GET["status"]))
-            {
-                $id = $_GET["id"];
-                $status = $_GET["status"];
-
-                $denuncia = new Denuncia(id_denuncia: $id, status_denuncia: $status);
-                $denunciaDAO = new DenunciaDAO();
-                $denunciaDAO -> mudar_status($denuncia);
-            }
-            header("location:index.php?controle=denunciaController&metodo=gerenciar");
         }
     }
 ?>

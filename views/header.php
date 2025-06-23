@@ -38,7 +38,7 @@
                             if (!isset($_SESSION["tipo"]) || $_SESSION["tipo"] === "Comum")
                             {
                             echo "<li>
-                                    <a href='index.php?controle=denunciaController&metodo=denuncias'>Últimas Denúncias</a>
+                                    <a href='index.php?controle=denunciaController&metodo=listarDenunciasAtivas'>Últimas Denúncias</a>
                                 </li>";
                             } ?>
                             <li>
@@ -52,7 +52,7 @@
                             {
                             echo "
                                 <li>
-                                    <a class='botao-header' href='index.php?controle=denunciaController&metodo=gerenciar'>Gerenciar Denúncias</a>
+                                    <a class='botao-header' href='index.php?controle=denunciaController&metodo=listarTodas'>Gerenciar Denúncias</a>
                                 </li>";
                             }
 
