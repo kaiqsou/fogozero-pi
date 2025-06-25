@@ -1,10 +1,4 @@
 <?php
-
-date_default_timezone_set('America/Sao_Paulo');
-
-require_once "Conexao.class.php";
-require_once "Denuncia.class.php";  
-
 class DenunciaDAO extends Conexao
 {
     public function __construct()
@@ -14,8 +8,8 @@ class DenunciaDAO extends Conexao
 
     public function inserir($denuncia)
     {
-        $sql = "INSERT INTO denuncias(descricao, localizacao, data_denuncia, comentario, imagem, status_denuncia, usuario_id) 
-        VALUES(?, ?, ?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO denuncias(descricao, localizacao, data_denuncia, comentario, imagem, status_denuncia, latitude, longitude, usuario_id) 
+        VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)";
         $stm = $this -> db -> prepare($sql);
         $stm -> bindValue(1, $denuncia -> getDescricao());
         $stm -> bindValue(2, $denuncia -> getLocalizacao());
@@ -23,11 +17,14 @@ class DenunciaDAO extends Conexao
         $stm -> bindValue(4, $denuncia -> getComentario());
         $stm -> bindValue(5, $denuncia -> getImagem());
         $stm -> bindValue(6, $denuncia -> getStatus());
-        $stm -> bindValue(7, $denuncia -> getUsuario() -> getId_usuario());
+		$stm -> bindValue(7, $denuncia -> getLatitude());
+		$stm -> bindValue(8, $denuncia -> getLongitude());
+        $stm -> bindValue(9, $denuncia -> getUsuario()->getId_usuario());
         $stm -> execute();
+		$id = $this->db->lastInsertId();
         $this -> db = null;
 
-        return "Denúncia inserida com sucesso!";
+        return $id;
     }
 
     public function buscar_denuncias()
@@ -37,9 +34,7 @@ class DenunciaDAO extends Conexao
 		{
 			$stm = $this -> db -> prepare($sql);
 			$stm -> execute();
-            
 			$this -> db = null;
-
 			return $stm -> fetchAll(PDO::FETCH_OBJ);
 		}
 		catch(PDOException $e) 
@@ -47,6 +42,31 @@ class DenunciaDAO extends Conexao
 			$this -> db = null;
 			return "Problema ao buscar as denúncias";
 		}
+    }
+
+    public function ver_detalhes($denuncia)
+    {
+        $sql = "SELECT 
+                    d.*, 
+                    f.*,
+                    u.id_usuario, u.nome 
+                FROM denuncias d 
+                LEFT JOIN feedbacks f ON f.id_usuario = d.id_usuario 
+                LEFT JOIN usuarios u ON f.id_usuario = u.id_usuario 
+                WHERE d.id_denuncia = ?";
+        try
+        {
+            $stm = $this -> db -> prepare($sql);
+            $stm -> bindValue(1, $denuncia -> getId_denuncia());
+            $stm -> execute();
+            $this -> db = null;
+            return $stm -> fetchAll(PDO::FETCH_OBJ);
+        }
+        catch(PDOException $e) 
+        {
+            $this -> db = null;
+            return "Problema ao buscar os feedbacks";
+        }
     }
 
     public function buscar_denuncias_ativas($denuncia)
@@ -65,7 +85,7 @@ class DenunciaDAO extends Conexao
         }
         catch(PDOException $e)
         {
-            $this -> db = null;
+            $this->db = null;
 			return "Problema ao buscar todos os produtos";
         }
     }
@@ -79,10 +99,6 @@ class DenunciaDAO extends Conexao
             $stm = $this -> db -> prepare($sql);
             $stm -> bindValue(1, $denuncia -> getStatus());
             $stm -> bindValue(2, $denuncia -> getId_denuncia());
-
-            $stm -> execute();
-
-            $this -> db = null;
         }
         catch(PDOException $e)
         {
@@ -90,6 +106,27 @@ class DenunciaDAO extends Conexao
 			return "Problema ao mudar o status";
         }
     }
+	public function buscar_uma($denuncia)
+    {
+        $sql = "SELECT * FROM denuncias WHERE id_denuncia = ?";
+
+        try 
+        {
+            $stm = $this -> db -> prepare($sql);
+			$stm -> bindValue(1, $denuncia -> getId_denuncia());
+			$stm -> execute();
+
+			$this->db = null;
+
+			return $stm->fetchAll(PDO::FETCH_OBJ);
+        }
+        catch(PDOException $e)
+        {
+            $this->db = null;
+			return "Problema ao buscar uma denuncia";
+        }
+    }
+	
 }
 
 ?>

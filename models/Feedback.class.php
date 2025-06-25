@@ -2,10 +2,9 @@
 
 class Feedback
 {
-
     public function __construct
     (
-        private int $id_feedback = 0,
+		private int $id_feedback = 0,
         private string $data_feedback = "",
         private string $comentario = "",
         private string $imagem = "",
@@ -32,6 +31,16 @@ class Feedback
     public function getImagem()
     {
         return $this -> imagem;
+    }
+
+	public function getUsuario()
+    {
+        return $this -> usuario;
+    }
+    
+	public function getDenuncia()
+    {
+        return $this -> denuncia;
     }
 }
 

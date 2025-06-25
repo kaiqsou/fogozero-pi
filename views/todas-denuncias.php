@@ -35,12 +35,15 @@
                         </div>
                         <p><span><strong>Descrição:</strong></span> {$dados->descricao}</p>
                         <p><span><strong>Local:</strong></span> {$dados->localizacao}</p>";
-                        if (!empty($dados -> comentario)) 
-                        {
-                            echo "<p><span><strong>Comentário:</strong></span> {$dados -> comentario}</p>";
-                        }
-                        echo "<p><span><strong>Data:</strong></span> {$dataFormatada}</p>
-                        <p><span><strong>Status:</strong></span> {$dados -> status_denuncia}</p></div>";
+                        
+                    if (!empty($dados -> comentario)) 
+                    {
+                        echo "<p><span><strong>Comentário:</strong></span> {$dados -> comentario}</p>";
+                    }
+
+                    echo "<p><span><strong>Data:</strong></span> {$dataFormatada}</p>
+                    <p><span><strong>Status:</strong></span> {$dados -> status_denuncia}</p>
+                    <br><a class='btn btn-primary' href='index.php?controle=denunciaController&metodo=detalhes&id={$dados->id_denuncia}'>Detalhes</a></div>";
 
                     $contador++;
                 }

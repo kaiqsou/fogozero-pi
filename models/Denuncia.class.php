@@ -2,18 +2,20 @@
     
     class Denuncia
     {
+        
+
         public function __construct
         (
-            private int $id_denuncia = 0,
+			private int $id_denuncia = 0,
             private string $descricao = "",
             private string $localizacao = "",
-            // private string $latitude = "",
-            // private string $longitude = "",
+            private string $latitude = "",
+            private string $longitude = "",
             private string $data_denuncia = "", 
             private string $comentario = "",
             private string $imagem = "",
             private string $status_denuncia = "",
-            private $usuario = null
+            private  $usuario = null
             // private $alerta = null,
             // private $feedback = null
         ){}
@@ -57,6 +59,14 @@
         public function getUsuario()
         {
             return $this -> usuario;
+        }
+		public function getLatitude()
+        {
+            return $this -> latitude;
+        }
+		public function getLongitude()
+        {
+            return $this -> longitude;
         }
     }
 

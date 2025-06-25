@@ -49,7 +49,7 @@ if (isset($_SESSION["id"]))
                             </div>
                             <div class='col'>
                                 <label for='local'>Local:</label>
-                                <input maxlength="255" type='text' class='form-control' id='localizacao' name='localizacao' placeholder='Digite a localização' value='<?php echo $localizacao; ?>'>
+                                <input maxlength="255" type='text' class='form-control' id='localizacao' name='localizacao' placeholder='logradouro,número,bairro,cidade,estado' value='<?php echo $localizacao; ?>'>
                                 <div style='color:red;font-size:16px;'><?php echo $msg[1] != '' ? $msg[1] : ''; ?></div>
                             </div>
                         </div><br>

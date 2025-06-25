@@ -2,10 +2,9 @@
 
 class Usuario
 {
-    
-    public function __construct
+     public function __construct
     (
-        private int $id_usuario = 0,
+		private int $id_usuario = 0,
         private string $nome = "",
         private string $email = "",
         private string $telefone = "",
@@ -16,7 +15,9 @@ class Usuario
         private string $bairro = "",
         private string $rua = "",
         private string $numero = "",
-        private string $imagem = ""
+        private string $imagem = "",
+		private string $latitude = "",
+		private string $longitude = ""
     ){}
 
     // métodos GET
@@ -79,6 +80,58 @@ class Usuario
     public function getImagem()
     {
         return $this -> imagem;
+    }
+
+    	public function getLatitude()
+    {
+        return $this -> latitude;
+    }
+    
+	public function getLongitude()
+    {
+        return $this -> longitude;
+    }
+
+    // métodos SET
+
+	public function setRua($rua)
+    {
+        $this -> rua = $rua;
+    }
+
+	public function setNumero($numero)
+    {
+        $this -> numero = $numero;
+    }
+
+	public function setBairro($bairro)
+    {
+        $this -> bairro = $bairro;
+    }
+
+	public function setCidade($cidade)
+    {
+        $this -> cidade = $cidade;
+    }
+
+	public function setCep($cep)
+    {
+        $this -> cep = $cep;
+    }
+
+	public function setEstado($estado)
+    {
+        $this -> estado = $estado;
+    }
+
+	public function setLatitude($latitude)
+    {
+        $this -> latitude = $latitude;
+    }
+
+	public function setLongitude($longitude)
+    {
+        $this -> longitude = $longitude;
     }
 }
 
